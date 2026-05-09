@@ -1,0 +1,26 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<TriggerOraclev10g class="oracle.dbtools.crest.model.design.storage.oracle.v10g.TriggerOraclev10g" name="TG_HITVND" directorySegmentName="seg_0" id="19049049-8F5E-369F-B5BC-1B3D07543016">
+<sourceConnName>Alfa</sourceConnName>
+<sourceObjSchema>ALFA</sourceObjSchema>
+<sourceObjName>TG_HITVND</sourceObjName>
+<createdBy>Henrique Chiosani</createdBy>
+<createdTime>2026-04-10 01:49:38 UTC</createdTime>
+<ownerDesignName>Alfa</ownerDesignName>
+<actions>UPDATE, DELETE</actions>
+<body><![CDATA[BEGIN
+    INSERT INTO 
+        HITEM_VENDA
+    VALUES(
+        :OLD.ITVND_VND_ID,
+        :OLD.ITVND_SKU_ID,
+        :OLD.ITVND_QTDE,
+        :OLD.ITVND_CUSTO,
+        :OLD.ITVND_VALOR,
+        SYSDATE
+    );
+END;
+]]></body>
+<triggerTime>BEFORE</triggerTime>
+<owner>A4DA9CBF-AA0D-E131-08E1-A1CC99048F70</owner>
+<table>38699B0E-3E9B-8F5F-B9BA-30914C249456</table>
+</TriggerOraclev10g>

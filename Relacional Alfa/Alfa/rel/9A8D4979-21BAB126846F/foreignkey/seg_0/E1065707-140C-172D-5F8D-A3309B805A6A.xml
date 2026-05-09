@@ -1,0 +1,19 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<FKIndexAssociation class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_0" id="E1065707-140C-172D-5F8D-A3309B805A6A" containerWithKeyObject="8F0E1411-5524-6E4A-8865-F787AAC9D593" localFKIndex="89A4DC7B-C992-3918-0C3A-BC4A39BDADC5" name="FK_VND_CAN">
+<sourceConnName>Alfa</sourceConnName>
+<sourceObjSchema>ALFA</sourceObjSchema>
+<sourceObjName>FK_VND_CAN</sourceObjName>
+<createdBy>Henrique Chiosani</createdBy>
+<createdTime>2026-04-10 01:49:38 UTC</createdTime>
+<ownerDesignName>Alfa</ownerDesignName>
+<referredTableLongName>ALFA.CANAL</referredTableLongName>
+<deleteRule>NO ACTION</deleteRule>
+<referredTableID>DDE3F175-5535-82B2-5E77-B70AB3D3A012</referredTableID>
+<keyObject>AB89AAFF-A52A-E3BB-B367-6A44CC6494AE</keyObject>
+<referredKeyID>AB89AAFF-A52A-E3BB-B367-6A44CC6494AE</referredKeyID>
+<mandatory>true</mandatory>
+<refColNames>CAN_ID</refColNames>
+<transferable>true</transferable>
+<rely>false</rely>
+<columnDependencyConstraintGenerateInDDL>true</columnDependencyConstraintGenerateInDDL>
+</FKIndexAssociation>

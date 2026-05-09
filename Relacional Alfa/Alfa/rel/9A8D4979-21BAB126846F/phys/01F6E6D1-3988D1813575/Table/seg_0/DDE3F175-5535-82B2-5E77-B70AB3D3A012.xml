@@ -1,0 +1,50 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<TableProxyOraclev20c class="oracle.dbtools.crest.model.design.storage.oracle.v20c.TableProxyOraclev20c" name="CANAL" directorySegmentName="seg_0" id="DDE3F175-5535-82B2-5E77-B70AB3D3A012">
+<createdBy>Henrique Chiosani</createdBy>
+<createdTime>2026-04-10 01:49:35 UTC</createdTime>
+<ownerDesignName>Alfa</ownerDesignName>
+<schemaObject>6A3EA8A7-BFE6-837D-A34E-84458FF73ABF</schemaObject>
+<logging>YES</logging>
+<partitionedRowMovement>DISABLE</partitionedRowMovement>
+<segment>8C0D6BC2-D846-D555-3A4F-0F941D1A7C96</segment>
+<tableSpace>98860CC6-5DE0-5D9D-EB91-E12A23142F2C</tableSpace>
+<temporaryChanged>false</temporaryChanged>
+<accessDriverType>oracle_loader</accessDriverType>
+<rejectLimit></rejectLimit>
+<inMemory>NO</inMemory>
+<columnProxies itemClass="oracle.dbtools.crest.model.design.storage.oracle.v12c.ColumnProxyOraclev12c">
+<ColumnProxy name="CAN_NOME" id="76F53210-00D4-996E-760A-F296BE71324E">
+<createdBy>Henrique Chiosani</createdBy>
+<createdTime>2026-04-10 01:49:35 UTC</createdTime>
+<ownerDesignName>Alfa</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="CAN_ID" id="AAED1A57-D3F5-E88B-15CE-5BF099C0DA22">
+<createdBy>Henrique Chiosani</createdBy>
+<createdTime>2026-04-10 01:49:35 UTC</createdTime>
+<ownerDesignName>Alfa</ownerDesignName>
+</ColumnProxy>
+</columnProxies>
+<indexProxies>
+<IndexProxy class="oracle.dbtools.crest.model.design.storage.oracle.v10g.IndexProxyOraclev10g" name="PK_CAN" id="C72B61ED-666E-FCCF-BF09-949D6AB4BA85">
+<createdBy>Henrique Chiosani</createdBy>
+<createdTime>2026-04-10 01:49:37 UTC</createdTime>
+<ownerDesignName>Alfa</ownerDesignName>
+<schemaObject>6A3EA8A7-BFE6-837D-A34E-84458FF73ABF</schemaObject>
+<segment>C19536ED-A232-701D-2513-0C59033E3D34</segment>
+<tableSpace>98860CC6-5DE0-5D9D-EB91-E12A23142F2C</tableSpace>
+</IndexProxy>
+</indexProxies>
+<primaryKeys>
+<PrimaryKey class="oracle.dbtools.crest.model.design.storage.oracle.v10g.PKProxyOraclev10g" name="PK_CAN" id="AB89AAFF-A52A-E3BB-B367-6A44CC6494AE">
+<createdBy>Henrique Chiosani</createdBy>
+<createdTime>2026-04-10 01:49:38 UTC</createdTime>
+<ownerDesignName>Alfa</ownerDesignName>
+<segment>C19536ED-A232-701D-2513-0C59033E3D34</segment>
+<tableSpace>98860CC6-5DE0-5D9D-EB91-E12A23142F2C</tableSpace>
+<existingIndex>C72B61ED-666E-FCCF-BF09-949D6AB4BA85</existingIndex>
+<indexSegment>C19536ED-A232-701D-2513-0C59033E3D34</indexSegment>
+<indexSort>SORTED</indexSort>
+<usingIndex>BY INDEX NAME</usingIndex>
+</PrimaryKey>
+</primaryKeys>
+</TableProxyOraclev20c>

@@ -1,0 +1,55 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<TableProxyOraclev20c class="oracle.dbtools.crest.model.design.storage.oracle.v20c.TableProxyOraclev20c" name="HCANAL" directorySegmentName="seg_0" id="E6538F34-D71E-5A97-6DBB-CAB0688E9E39">
+<createdBy>Henrique Chiosani</createdBy>
+<createdTime>2026-04-10 01:49:35 UTC</createdTime>
+<ownerDesignName>Alfa</ownerDesignName>
+<schemaObject>6A3EA8A7-BFE6-837D-A34E-84458FF73ABF</schemaObject>
+<logging>YES</logging>
+<partitionedRowMovement>DISABLE</partitionedRowMovement>
+<segment>F8FEFC01-4E70-2BED-272E-016DB2AE1711</segment>
+<tableSpace>98860CC6-5DE0-5D9D-EB91-E12A23142F2C</tableSpace>
+<temporaryChanged>false</temporaryChanged>
+<accessDriverType>oracle_loader</accessDriverType>
+<rejectLimit></rejectLimit>
+<inMemory>NO</inMemory>
+<columnProxies itemClass="oracle.dbtools.crest.model.design.storage.oracle.v12c.ColumnProxyOraclev12c">
+<ColumnProxy name="HCAN_DATE" id="5F2BAFA6-E611-219E-18C7-7BF8607814DB">
+<createdBy>Henrique Chiosani</createdBy>
+<createdTime>2026-04-10 01:49:35 UTC</createdTime>
+<ownerDesignName>Alfa</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="HCAN_NOME" id="861FAEC6-61A0-E08B-36AD-32BB6D20C52F">
+<createdBy>Henrique Chiosani</createdBy>
+<createdTime>2026-04-10 01:49:35 UTC</createdTime>
+<ownerDesignName>Alfa</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="HCAN_ID" id="DA701B76-44A1-4733-563B-66EC63995E0B">
+<createdBy>Henrique Chiosani</createdBy>
+<createdTime>2026-04-10 01:49:35 UTC</createdTime>
+<ownerDesignName>Alfa</ownerDesignName>
+</ColumnProxy>
+</columnProxies>
+<indexProxies>
+<IndexProxy class="oracle.dbtools.crest.model.design.storage.oracle.v10g.IndexProxyOraclev10g" name="PK_HCAN" id="1A8F40E4-136E-CC14-37EC-4A72ACAFFC1D">
+<createdBy>Henrique Chiosani</createdBy>
+<createdTime>2026-04-10 01:49:37 UTC</createdTime>
+<ownerDesignName>Alfa</ownerDesignName>
+<schemaObject>6A3EA8A7-BFE6-837D-A34E-84458FF73ABF</schemaObject>
+<segment>03C662AD-8FAA-22FE-6056-3EF676F453C1</segment>
+<tableSpace>98860CC6-5DE0-5D9D-EB91-E12A23142F2C</tableSpace>
+</IndexProxy>
+</indexProxies>
+<primaryKeys>
+<PrimaryKey class="oracle.dbtools.crest.model.design.storage.oracle.v10g.PKProxyOraclev10g" name="PK_HCAN" id="8F7B8CE4-A9CA-077B-1A0B-6924E4FAB458">
+<createdBy>Henrique Chiosani</createdBy>
+<createdTime>2026-04-10 01:49:38 UTC</createdTime>
+<ownerDesignName>Alfa</ownerDesignName>
+<segment>03C662AD-8FAA-22FE-6056-3EF676F453C1</segment>
+<tableSpace>98860CC6-5DE0-5D9D-EB91-E12A23142F2C</tableSpace>
+<existingIndex>1A8F40E4-136E-CC14-37EC-4A72ACAFFC1D</existingIndex>
+<indexSegment>03C662AD-8FAA-22FE-6056-3EF676F453C1</indexSegment>
+<indexSort>SORTED</indexSort>
+<usingIndex>BY INDEX NAME</usingIndex>
+</PrimaryKey>
+</primaryKeys>
+</TableProxyOraclev20c>

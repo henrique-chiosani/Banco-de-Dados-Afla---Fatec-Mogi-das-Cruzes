@@ -1,0 +1,76 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="DDE3F175-5535-82B2-5E77-B70AB3D3A012" schemaObject="6A3EA8A7-BFE6-837D-A34E-84458FF73ABF" name="CANAL">
+<sourceConnName>Alfa</sourceConnName>
+<sourceObjSchema>ALFA</sourceObjSchema>
+<sourceObjName>CANAL</sourceObjName>
+<createdBy>Henrique Chiosani</createdBy>
+<createdTime>2026-04-10 01:49:35 UTC</createdTime>
+<commentInRDBMS><![CDATA[TABELA REFERENTE AOS CANAIS DE VENDA]]></commentInRDBMS>
+<ownerDesignName>Alfa</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="CAN_ID" id="AAED1A57-D3F5-E88B-15CE-5BF099C0DA22">
+<sourceConnName>Alfa</sourceConnName>
+<sourceObjSchema>CANAL</sourceObjSchema>
+<sourceObjName>CAN_ID</sourceObjName>
+<createdBy>Henrique Chiosani</createdBy>
+<createdTime>2026-04-10 01:49:35 UTC</createdTime>
+<commentInRDBMS><![CDATA[COLUNA REFERENTE A CHAVE PRIMARIA DA TABELA CANAL]]></commentInRDBMS>
+<ownerDesignName>Alfa</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>6</dataTypePrecision>
+<dataTypeScale>0</dataTypeScale>
+<ownDataTypeParameters>,6,0</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="CAN_NOME" id="76F53210-00D4-996E-760A-F296BE71324E">
+<sourceConnName>Alfa</sourceConnName>
+<sourceObjSchema>CANAL</sourceObjSchema>
+<sourceObjName>CAN_NOME</sourceObjName>
+<createdBy>Henrique Chiosani</createdBy>
+<createdTime>2026-04-10 01:49:35 UTC</createdTime>
+<commentInRDBMS><![CDATA[COLUNA REFERENTE AO NOME DO CANAL]]></commentInRDBMS>
+<ownerDesignName>Alfa</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>50 BYTE</dataTypeSize>
+<ownDataTypeParameters>50 BYTE,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<notNullConstraintName>CK_CAN_NN_01</notNullConstraintName>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="AB89AAFF-A52A-E3BB-B367-6A44CC6494AE" name="PK_CAN">
+<sourceConnName>Alfa</sourceConnName>
+<sourceObjSchema>ALFA</sourceObjSchema>
+<sourceObjName>PK_CAN</sourceObjName>
+<createdBy>Henrique Chiosani</createdBy>
+<createdTime>2026-04-10 01:49:38 UTC</createdTime>
+<ownerDesignName>Alfa</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="AAED1A57-D3F5-E88B-15CE-5BF099C0DA22"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="C72B61ED-666E-FCCF-BF09-949D6AB4BA85" schemaObject="6A3EA8A7-BFE6-837D-A34E-84458FF73ABF" name="PK_CAN">
+<sourceConnName>Alfa</sourceConnName>
+<sourceObjSchema>ALFA</sourceObjSchema>
+<sourceObjName>PK_CAN</sourceObjName>
+<createdBy>Henrique Chiosani</createdBy>
+<createdTime>2026-04-10 01:49:37 UTC</createdTime>
+<ownerDesignName>Alfa</ownerDesignName>
+<indexState>Unique Plain Index</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="AAED1A57-D3F5-E88B-15CE-5BF099C0DA22"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

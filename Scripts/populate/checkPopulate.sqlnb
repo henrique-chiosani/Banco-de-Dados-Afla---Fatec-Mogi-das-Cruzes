@@ -1,0 +1,53 @@
+cells:
+  - kind: 1
+    value: "# Consultas De Verificação de Carga"
+    languageId: markdown
+  - kind: 1
+    value: "> VERIFICAÇÃO DE DADOS TABELA PRODUTO"
+    languageId: markdown
+  - kind: 2
+    value: |-
+      -- TABELA PRODUTO
+      SELECT * FROM PRODUTO
+      FETCH FIRST 25 ROW ONLY;
+    languageId: oracle-sql
+  - kind: 1
+    value: ">VERIFICAÇÃO DE DADOS TABELA LOJA"
+    languageId: markdown
+  - kind: 2
+    value: |-
+      SELECT * FROM LOJA
+      FETCH FIRST 25 ROW ONLY;
+    languageId: oracle-sql
+  - kind: 1
+    value: ">VERIFICAÇÃO DE DADOS TABELA CANAL"
+    languageId: markdown
+  - kind: 2
+    value: |-
+      SELECT * FROM CANAL
+      FETCH FIRST 25 ROW ONLY;
+    languageId: oracle-sql
+  - kind: 1
+    value: ">VERIFICAÇAO DE DADOS TABELA SKU"
+    languageId: markdown
+  - kind: 2
+    value: |-
+      SELECT * FROM SKU
+      FETCH FIRST 25 ROW ONLY;
+    languageId: oracle-sql
+  - kind: 1
+    value: ">VERIFICAÇAO DE DADOS TABELA VENDA"
+    languageId: markdown
+  - kind: 2
+    value: |-
+      SELECT * FROM VENDA
+      FETCH FIRST 25 ROW ONLY;
+    languageId: oracle-sql
+  - kind: 1
+    value: ">VERIFICAÇAO DE DADOS TABELA ITEM_VENDA"
+    languageId: markdown
+  - kind: 2
+    value: |-
+      SELECT * FROM ITEM_VENDA
+      FETCH FIRST 25 ROW ONLY;
+    languageId: oracle-sql

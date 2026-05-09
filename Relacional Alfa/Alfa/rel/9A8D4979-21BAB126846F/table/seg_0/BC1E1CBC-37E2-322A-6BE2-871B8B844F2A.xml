@@ -1,0 +1,145 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="BC1E1CBC-37E2-322A-6BE2-871B8B844F2A" schemaObject="6A3EA8A7-BFE6-837D-A34E-84458FF73ABF" name="HITEM_VENDA">
+<sourceConnName>Alfa</sourceConnName>
+<sourceObjSchema>ALFA</sourceObjSchema>
+<sourceObjName>HITEM_VENDA</sourceObjName>
+<createdBy>Henrique Chiosani</createdBy>
+<createdTime>2026-04-10 01:49:35 UTC</createdTime>
+<commentInRDBMS><![CDATA[TABELA REFERENTE AO HISTORICO DA TABELA ITENS PRESENTES NAS VENDAS]]></commentInRDBMS>
+<ownerDesignName>Alfa</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="HITVND_VND_ID" id="650035E9-3AFA-F31B-AF59-3D5C97DD684A">
+<sourceConnName>Alfa</sourceConnName>
+<sourceObjSchema>HITEM_VENDA</sourceObjSchema>
+<sourceObjName>HITVND_VND_ID</sourceObjName>
+<createdBy>Henrique Chiosani</createdBy>
+<createdTime>2026-04-10 01:49:35 UTC</createdTime>
+<commentInRDBMS><![CDATA[COLUNA REFERENTE AO REGISTRO DA CHAVE PRIMARIA COMPOSTA E ESTRANGEIRA REFERENCIADA PELA TABELA VENDAS]]></commentInRDBMS>
+<ownerDesignName>Alfa</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>6</dataTypePrecision>
+<dataTypeScale>0</dataTypeScale>
+<ownDataTypeParameters>,6,0</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="HITVND_SKU_ID" id="B4192605-B0D7-50B8-E3F9-14DA01EB0FE0">
+<sourceConnName>Alfa</sourceConnName>
+<sourceObjSchema>HITEM_VENDA</sourceObjSchema>
+<sourceObjName>HITVND_SKU_ID</sourceObjName>
+<createdBy>Henrique Chiosani</createdBy>
+<createdTime>2026-04-10 01:49:35 UTC</createdTime>
+<commentInRDBMS><![CDATA[COLUNA REFERENTE AO REGISTRO DA CHAVE PRIMARIA COMPOSTA E ESTRANGEIRA REFERENCIADA PELA TABELA SKU]]></commentInRDBMS>
+<ownerDesignName>Alfa</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>6</dataTypePrecision>
+<dataTypeScale>0</dataTypeScale>
+<ownDataTypeParameters>,6,0</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="HITVND_QTDE" id="7BEDFB3D-BC37-A745-7B37-83E4060B4750">
+<sourceConnName>Alfa</sourceConnName>
+<sourceObjSchema>HITEM_VENDA</sourceObjSchema>
+<sourceObjName>HITVND_QTDE</sourceObjName>
+<createdBy>Henrique Chiosani</createdBy>
+<createdTime>2026-04-10 01:49:35 UTC</createdTime>
+<commentInRDBMS><![CDATA[COLUNA REFERENTE AO REGISTRO DA QUANTIDADE DE ITENS]]></commentInRDBMS>
+<ownerDesignName>Alfa</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>6</dataTypePrecision>
+<dataTypeScale>0</dataTypeScale>
+<ownDataTypeParameters>,6,0</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="HITVND_CUSTO" id="A5B6CF9D-1821-7F44-450D-82145D83EF9E">
+<sourceConnName>Alfa</sourceConnName>
+<sourceObjSchema>HITEM_VENDA</sourceObjSchema>
+<sourceObjName>HITVND_CUSTO</sourceObjName>
+<createdBy>Henrique Chiosani</createdBy>
+<createdTime>2026-04-10 01:49:35 UTC</createdTime>
+<commentInRDBMS><![CDATA[CUSTO REFERENTE AO REGISTRO DO PRODUTO NO MOMENTO DA VENDA]]></commentInRDBMS>
+<ownerDesignName>Alfa</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>12</dataTypePrecision>
+<dataTypeScale>2</dataTypeScale>
+<ownDataTypeParameters>,12,2</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="HITVND_VALOR" id="FC5159BD-5E1F-FC75-D6AA-882A193B8268">
+<sourceConnName>Alfa</sourceConnName>
+<sourceObjSchema>HITEM_VENDA</sourceObjSchema>
+<sourceObjName>HITVND_VALOR</sourceObjName>
+<createdBy>Henrique Chiosani</createdBy>
+<createdTime>2026-04-10 01:49:35 UTC</createdTime>
+<commentInRDBMS><![CDATA[COLUNA REFERENTE AO REGISTRDO DO VALOR TOTAL DOS ITENS]]></commentInRDBMS>
+<ownerDesignName>Alfa</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>12</dataTypePrecision>
+<dataTypeScale>2</dataTypeScale>
+<ownDataTypeParameters>,12,2</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="HITVND_DATE" id="A2FC73E6-DEEF-2071-1D03-D13C7D0D3D4C">
+<sourceConnName>Alfa</sourceConnName>
+<sourceObjSchema>HITEM_VENDA</sourceObjSchema>
+<sourceObjName>HITVND_DATE</sourceObjName>
+<createdBy>Henrique Chiosani</createdBy>
+<createdTime>2026-04-10 01:49:35 UTC</createdTime>
+<ownerDesignName>Alfa</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT015</logicalDatatype>
+<dataTypePrecision>6</dataTypePrecision>
+<ownDataTypeParameters>,6,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="3F737344-607E-940C-81AF-D1CE61961B97" name="PK_HITVND">
+<sourceConnName>Alfa</sourceConnName>
+<sourceObjSchema>ALFA</sourceObjSchema>
+<sourceObjName>PK_HITVND</sourceObjName>
+<createdBy>Henrique Chiosani</createdBy>
+<createdTime>2026-04-10 01:49:38 UTC</createdTime>
+<ownerDesignName>Alfa</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="650035E9-3AFA-F31B-AF59-3D5C97DD684A"/>
+<colUsage columnID="B4192605-B0D7-50B8-E3F9-14DA01EB0FE0"/>
+<colUsage columnID="A2FC73E6-DEEF-2071-1D03-D13C7D0D3D4C"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="548DDB12-8AC5-6AD7-9CDE-06639605E04A" schemaObject="6A3EA8A7-BFE6-837D-A34E-84458FF73ABF" name="PK_HITVND">
+<sourceConnName>Alfa</sourceConnName>
+<sourceObjSchema>ALFA</sourceObjSchema>
+<sourceObjName>PK_HITVND</sourceObjName>
+<createdBy>Henrique Chiosani</createdBy>
+<createdTime>2026-04-10 01:49:38 UTC</createdTime>
+<ownerDesignName>Alfa</ownerDesignName>
+<indexState>Unique Plain Index</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="650035E9-3AFA-F31B-AF59-3D5C97DD684A"/>
+<colUsage columnID="B4192605-B0D7-50B8-E3F9-14DA01EB0FE0"/>
+<colUsage columnID="A2FC73E6-DEEF-2071-1D03-D13C7D0D3D4C"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

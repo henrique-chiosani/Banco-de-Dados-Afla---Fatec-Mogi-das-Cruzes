@@ -1,0 +1,19 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<FKIndexAssociation class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_0" id="B4A1F675-30C8-B38C-AD35-57ECB1243B81" containerWithKeyObject="38699B0E-3E9B-8F5F-B9BA-30914C249456" localFKIndex="E9BA4B85-1528-E98A-EA06-318D71D369B6" name="FK_ITVND_SKU">
+<sourceConnName>Alfa</sourceConnName>
+<sourceObjSchema>ALFA</sourceObjSchema>
+<sourceObjName>FK_ITVND_SKU</sourceObjName>
+<createdBy>Henrique Chiosani</createdBy>
+<createdTime>2026-04-10 01:49:38 UTC</createdTime>
+<ownerDesignName>Alfa</ownerDesignName>
+<referredTableLongName>ALFA.SKU</referredTableLongName>
+<deleteRule>NO ACTION</deleteRule>
+<referredTableID>8CC6ACE3-D518-6D0A-C8E2-50C5B1728943</referredTableID>
+<keyObject>07F86E7E-7BF0-9DFD-C0E2-F2A076E163C4</keyObject>
+<referredKeyID>07F86E7E-7BF0-9DFD-C0E2-F2A076E163C4</referredKeyID>
+<mandatory>true</mandatory>
+<refColNames>SKU_ID</refColNames>
+<transferable>true</transferable>
+<rely>false</rely>
+<columnDependencyConstraintGenerateInDDL>true</columnDependencyConstraintGenerateInDDL>
+</FKIndexAssociation>

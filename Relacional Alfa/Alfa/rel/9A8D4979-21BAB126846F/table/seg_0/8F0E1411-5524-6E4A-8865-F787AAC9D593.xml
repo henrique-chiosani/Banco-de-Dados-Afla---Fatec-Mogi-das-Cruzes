@@ -1,0 +1,195 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="8F0E1411-5524-6E4A-8865-F787AAC9D593" schemaObject="6A3EA8A7-BFE6-837D-A34E-84458FF73ABF" name="VENDA">
+<sourceConnName>Alfa</sourceConnName>
+<sourceObjSchema>ALFA</sourceObjSchema>
+<sourceObjName>VENDA</sourceObjName>
+<createdBy>Henrique Chiosani</createdBy>
+<createdTime>2026-04-10 01:49:35 UTC</createdTime>
+<commentInRDBMS><![CDATA[TABELA REFERENTE AS VENDAS]]></commentInRDBMS>
+<ownerDesignName>Alfa</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="VND_ID" id="CD0FD74D-3766-EC0E-3ED8-B6BDC02A6D64">
+<sourceConnName>Alfa</sourceConnName>
+<sourceObjSchema>VENDA</sourceObjSchema>
+<sourceObjName>VND_ID</sourceObjName>
+<createdBy>Henrique Chiosani</createdBy>
+<createdTime>2026-04-10 01:49:35 UTC</createdTime>
+<commentInRDBMS><![CDATA[COLUNA REFERENTE A CHAVE PRIMARIA DA TABELA VENDA]]></commentInRDBMS>
+<ownerDesignName>Alfa</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>6</dataTypePrecision>
+<dataTypeScale>0</dataTypeScale>
+<ownDataTypeParameters>,6,0</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="VND_PEDIDO" id="57ED2822-FB03-318F-F6E3-9708955726A9">
+<sourceConnName>Alfa</sourceConnName>
+<sourceObjSchema>VENDA</sourceObjSchema>
+<sourceObjName>VND_PEDIDO</sourceObjName>
+<createdBy>Henrique Chiosani</createdBy>
+<createdTime>2026-04-10 01:49:35 UTC</createdTime>
+<commentInRDBMS><![CDATA[COLUNA REFERENTE A CHAVE DE IDENTIFICACAO GERADA PELO MARKETPLACE]]></commentInRDBMS>
+<ownerDesignName>Alfa</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>100 BYTE</dataTypeSize>
+<ownDataTypeParameters>100 BYTE,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<notNullConstraintName>CK_VND_NN_01</notNullConstraintName>
+</Column>
+<Column name="VND_LOJ_ID" id="7727A5B7-A205-3ED2-7728-571F9DB35685">
+<sourceConnName>Alfa</sourceConnName>
+<sourceObjSchema>VENDA</sourceObjSchema>
+<sourceObjName>VND_LOJ_ID</sourceObjName>
+<createdBy>Henrique Chiosani</createdBy>
+<createdTime>2026-04-10 01:49:35 UTC</createdTime>
+<commentInRDBMS><![CDATA[COLUNA REFERENTE A CHAVE ESTRANGEIRA REFERENCIADA PELA TABELA LOJA]]></commentInRDBMS>
+<ownerDesignName>Alfa</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>6</dataTypePrecision>
+<dataTypeScale>0</dataTypeScale>
+<ownDataTypeParameters>,6,0</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<notNullConstraintName>CK_VND_NN_02</notNullConstraintName>
+<associations>
+<colAssociation fkAssociation="11FC0B2D-3613-D4E5-BC3C-DA1880DA358C" referredColumn="674D0A4D-A0FA-965B-FE04-E09A79C01183"/>
+</associations>
+</Column>
+<Column name="VND_CAN_ID" id="51BFF7F2-3417-684C-4BEE-6111A6637267">
+<sourceConnName>Alfa</sourceConnName>
+<sourceObjSchema>VENDA</sourceObjSchema>
+<sourceObjName>VND_CAN_ID</sourceObjName>
+<createdBy>Henrique Chiosani</createdBy>
+<createdTime>2026-04-10 01:49:35 UTC</createdTime>
+<commentInRDBMS><![CDATA[COLUNA REFERENTE A CHAVE ESTRANGEIRA REFERENCIADA PELA TABELA CANAL]]></commentInRDBMS>
+<ownerDesignName>Alfa</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>6</dataTypePrecision>
+<dataTypeScale>0</dataTypeScale>
+<ownDataTypeParameters>,6,0</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<notNullConstraintName>CK_VND_NN_03</notNullConstraintName>
+<associations>
+<colAssociation fkAssociation="E1065707-140C-172D-5F8D-A3309B805A6A" referredColumn="AAED1A57-D3F5-E88B-15CE-5BF099C0DA22"/>
+</associations>
+</Column>
+<Column name="VND_DATA_VENDA" id="D946EECB-3D3E-A84D-7D17-B08FDE912661">
+<sourceConnName>Alfa</sourceConnName>
+<sourceObjSchema>VENDA</sourceObjSchema>
+<sourceObjName>VND_DATA_VENDA</sourceObjName>
+<createdBy>Henrique Chiosani</createdBy>
+<createdTime>2026-04-10 01:49:35 UTC</createdTime>
+<commentInRDBMS><![CDATA[COLUNA REFERENTE A DATA EM QUE FOI REALIZADA A VENDA]]></commentInRDBMS>
+<ownerDesignName>Alfa</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<dataTypeSize>7</dataTypeSize>
+<ownDataTypeParameters>7,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<notNullConstraintName>CK_VND_NN_04</notNullConstraintName>
+</Column>
+<Column name="VND_VALOR_TOTAL" id="3FDDA01A-1D11-4335-4125-9D3AF0898EF4">
+<sourceConnName>Alfa</sourceConnName>
+<sourceObjSchema>VENDA</sourceObjSchema>
+<sourceObjName>VND_VALOR_TOTAL</sourceObjName>
+<createdBy>Henrique Chiosani</createdBy>
+<createdTime>2026-04-10 01:49:35 UTC</createdTime>
+<commentInRDBMS><![CDATA[COLUNA REFERENTE AO VALOR TOTAL DA VENDA]]></commentInRDBMS>
+<ownerDesignName>Alfa</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>12</dataTypePrecision>
+<dataTypeScale>2</dataTypeScale>
+<ownDataTypeParameters>,12,2</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<notNullConstraintName>CK_VND_NN_05</notNullConstraintName>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="8550CD59-03AB-1950-5F06-E5188DEC14B4" name="PK_VND">
+<sourceConnName>Alfa</sourceConnName>
+<sourceObjSchema>ALFA</sourceObjSchema>
+<sourceObjName>PK_VND</sourceObjName>
+<createdBy>Henrique Chiosani</createdBy>
+<createdTime>2026-04-10 01:49:38 UTC</createdTime>
+<ownerDesignName>Alfa</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="CD0FD74D-3766-EC0E-3ED8-B6BDC02A6D64"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="93D755C5-3604-A08C-35F0-126E4C793921" name="UK_VND_01">
+<sourceConnName>Alfa</sourceConnName>
+<sourceObjSchema>ALFA</sourceObjSchema>
+<sourceObjName>UK_VND_01</sourceObjName>
+<createdBy>Henrique Chiosani</createdBy>
+<createdTime>2026-04-10 01:49:38 UTC</createdTime>
+<ownerDesignName>Alfa</ownerDesignName>
+<indexState>Unique Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="57ED2822-FB03-318F-F6E3-9708955726A9"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="C070B261-6FF6-2F70-0638-E80AB91030BD" schemaObject="6A3EA8A7-BFE6-837D-A34E-84458FF73ABF" name="PK_VND">
+<sourceConnName>Alfa</sourceConnName>
+<sourceObjSchema>ALFA</sourceObjSchema>
+<sourceObjName>PK_VND</sourceObjName>
+<createdBy>Henrique Chiosani</createdBy>
+<createdTime>2026-04-10 01:49:38 UTC</createdTime>
+<ownerDesignName>Alfa</ownerDesignName>
+<indexState>Unique Plain Index</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="CD0FD74D-3766-EC0E-3ED8-B6BDC02A6D64"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="7921C072-9F12-9694-2E60-7303B9223DB8" schemaObject="6A3EA8A7-BFE6-837D-A34E-84458FF73ABF" name="UK_VND_01">
+<sourceConnName>Alfa</sourceConnName>
+<sourceObjSchema>ALFA</sourceObjSchema>
+<sourceObjName>UK_VND_01</sourceObjName>
+<createdBy>Henrique Chiosani</createdBy>
+<createdTime>2026-04-10 01:49:38 UTC</createdTime>
+<ownerDesignName>Alfa</ownerDesignName>
+<indexState>Unique Plain Index</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="57ED2822-FB03-318F-F6E3-9708955726A9"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="89A4DC7B-C992-3918-0C3A-BC4A39BDADC5" name="FK_VND_CAN">
+<createdBy>Henrique Chiosani</createdBy>
+<createdTime>2026-04-10 01:49:38 UTC</createdTime>
+<ownerDesignName>Alfa</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="51BFF7F2-3417-684C-4BEE-6111A6637267"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="073EEC4D-F869-EB37-91D2-E4A24D02489E" name="FK_VND_LOJ">
+<createdBy>Henrique Chiosani</createdBy>
+<createdTime>2026-04-10 01:49:38 UTC</createdTime>
+<ownerDesignName>Alfa</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="7727A5B7-A205-3ED2-7728-571F9DB35685"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

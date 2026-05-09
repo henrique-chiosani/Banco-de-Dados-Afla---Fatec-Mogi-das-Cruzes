@@ -1,0 +1,55 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<TableProxyOraclev20c class="oracle.dbtools.crest.model.design.storage.oracle.v20c.TableProxyOraclev20c" name="HPRODUTO" directorySegmentName="seg_0" id="8ABBEDEB-4C15-13E1-D2AD-6EEA0425B2DE">
+<createdBy>Henrique Chiosani</createdBy>
+<createdTime>2026-04-10 01:49:35 UTC</createdTime>
+<ownerDesignName>Alfa</ownerDesignName>
+<schemaObject>6A3EA8A7-BFE6-837D-A34E-84458FF73ABF</schemaObject>
+<logging>YES</logging>
+<partitionedRowMovement>DISABLE</partitionedRowMovement>
+<segment>F8FEFC01-4E70-2BED-272E-016DB2AE1711</segment>
+<tableSpace>98860CC6-5DE0-5D9D-EB91-E12A23142F2C</tableSpace>
+<temporaryChanged>false</temporaryChanged>
+<accessDriverType>oracle_loader</accessDriverType>
+<rejectLimit></rejectLimit>
+<inMemory>NO</inMemory>
+<columnProxies itemClass="oracle.dbtools.crest.model.design.storage.oracle.v12c.ColumnProxyOraclev12c">
+<ColumnProxy name="HPRD_DATE" id="550A23F7-ABFF-911F-F58C-8B58B0337427">
+<createdBy>Henrique Chiosani</createdBy>
+<createdTime>2026-04-10 01:49:35 UTC</createdTime>
+<ownerDesignName>Alfa</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="HPRD_ID" id="5E804DCC-CA25-D762-FC0D-854C0D1D4258">
+<createdBy>Henrique Chiosani</createdBy>
+<createdTime>2026-04-10 01:49:35 UTC</createdTime>
+<ownerDesignName>Alfa</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="HPRD_NOME" id="739E06CE-7BDF-0244-CA92-47091C5B4354">
+<createdBy>Henrique Chiosani</createdBy>
+<createdTime>2026-04-10 01:49:35 UTC</createdTime>
+<ownerDesignName>Alfa</ownerDesignName>
+</ColumnProxy>
+</columnProxies>
+<indexProxies>
+<IndexProxy class="oracle.dbtools.crest.model.design.storage.oracle.v10g.IndexProxyOraclev10g" name="PK_HPRD" id="A6128BD4-E050-03BC-53A6-B202E68F4FE8">
+<createdBy>Henrique Chiosani</createdBy>
+<createdTime>2026-04-10 01:49:38 UTC</createdTime>
+<ownerDesignName>Alfa</ownerDesignName>
+<schemaObject>6A3EA8A7-BFE6-837D-A34E-84458FF73ABF</schemaObject>
+<segment>03C662AD-8FAA-22FE-6056-3EF676F453C1</segment>
+<tableSpace>98860CC6-5DE0-5D9D-EB91-E12A23142F2C</tableSpace>
+</IndexProxy>
+</indexProxies>
+<primaryKeys>
+<PrimaryKey class="oracle.dbtools.crest.model.design.storage.oracle.v10g.PKProxyOraclev10g" name="PK_HPRD" id="5DBAADE5-EF2E-DAB5-9291-516A53214360">
+<createdBy>Henrique Chiosani</createdBy>
+<createdTime>2026-04-10 01:49:38 UTC</createdTime>
+<ownerDesignName>Alfa</ownerDesignName>
+<segment>03C662AD-8FAA-22FE-6056-3EF676F453C1</segment>
+<tableSpace>98860CC6-5DE0-5D9D-EB91-E12A23142F2C</tableSpace>
+<existingIndex>A6128BD4-E050-03BC-53A6-B202E68F4FE8</existingIndex>
+<indexSegment>03C662AD-8FAA-22FE-6056-3EF676F453C1</indexSegment>
+<indexSort>SORTED</indexSort>
+<usingIndex>BY INDEX NAME</usingIndex>
+</PrimaryKey>
+</primaryKeys>
+</TableProxyOraclev20c>

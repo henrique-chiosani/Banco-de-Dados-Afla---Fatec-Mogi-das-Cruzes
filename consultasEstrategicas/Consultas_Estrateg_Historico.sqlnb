@@ -1,0 +1,353 @@
+cells:
+  - kind: 1
+    value: "# Pesquisas Estratégicas Lab. de Dados - Histórico\r
+
+      \r
+
+      > Adriana Diógenes \r
+
+      \r
+
+      > Guilherme Prado\r
+
+      \r
+
+      > Henrique Chiosani\r
+
+      \r
+
+      > Rafaela Nunes\r
+
+      \ "
+    languageId: markdown
+  - kind: 1
+    value: "## Consultas Adriana Diógenes"
+    languageId: markdown
+  - kind: 2
+    value: "-- Consulta 1 - SKUs QUE TIVERAM O CUSTO ALTERADO\r
+
+      \r
+
+      \r
+
+      SELECT\r
+
+      \    S.SKU_KEY                           AS SKU,\r
+
+      \    P.PRD_NOME                          AS PRODUTO,\r
+
+      \    H.HSKU_CUSTO                        AS CUSTO_ANTERIOR,\r
+
+      \    S.SKU_CUSTO                         AS CUSTO_ATUAL,\r
+
+      \    S.SKU_CUSTO - H.HSKU_CUSTO          AS DIFERENCA,\r
+
+      \    TO_CHAR(H.HSKU_DATE, 'DD/MM/YYYY')  AS DATA_ALTERACAO\r
+
+      FROM SKU S\r
+
+      INNER JOIN PRODUTO P ON P.PRD_ID = S.SKU_PRD_ID\r
+
+      INNER JOIN (\r
+
+      \    SELECT HSKU_KEY, HSKU_CUSTO, HSKU_DATE\r
+
+      \    FROM HSKU\r
+
+      \    WHERE HSKU_DATE = (\r
+
+      \        SELECT MAX(HSKU_DATE)\r
+
+      \        FROM HSKU H2\r
+
+      \        WHERE H2.HSKU_KEY = HSKU.HSKU_KEY\r
+
+      \    )\r
+
+      ) H ON H.HSKU_KEY = S.SKU_KEY\r
+
+      WHERE S.SKU_CUSTO <> H.HSKU_CUSTO\r
+
+      ORDER BY ABS(S.SKU_CUSTO - H.HSKU_CUSTO) DESC;\r
+
+      /\r\n"
+    languageId: oracle-sql
+  - kind: 2
+    value: "-- Consulta 2 - TOTAL DE PEDIDOS E RECEITA POR LOJA NO HISTORICO\r
+
+      \r
+
+      SELECT\r
+
+      \    L.LOJ_NOME                  AS LOJA,\r
+
+      \    COUNT(HV.HVND_ID)           AS TOTAL_PEDIDOS,\r
+
+      \    SUM(HV.HVND_VALOR_TOTAL)    AS RECEITA_TOTAL,\r
+
+      \    ROUND(AVG(HV.HVND_VALOR_TOTAL), 2) AS TICKET_MEDIO\r
+
+      FROM HVENDA HV\r
+
+      INNER JOIN LOJA L ON L.LOJ_ID = HV.HVND_LOJ_ID\r
+
+      GROUP BY L.LOJ_NOME\r
+
+      ORDER BY RECEITA_TOTAL DESC;\r
+
+      /"
+    languageId: oracle-sql
+  - kind: 1
+    value: "## Consultas Guilherme Prado"
+    languageId: markdown
+  - kind: 2
+    value: "-- Consulta 3 - PRODUTOS SEM NENHUM REAJUSTE DE CUSTO\r
+
+      \r
+
+      SELECT\r
+
+      \    S.SKU_KEY   AS SKU,\r
+
+      \    P.PRD_NOME  AS PRODUTO,\r
+
+      \    S.SKU_CUSTO AS CUSTO_ATUAL\r
+
+      FROM SKU S\r
+
+      INNER JOIN PRODUTO P ON P.PRD_ID = S.SKU_PRD_ID\r
+
+      WHERE NOT EXISTS (\r
+
+      \    SELECT 1\r
+
+      \    FROM HSKU H\r
+
+      \    WHERE H.HSKU_KEY = S.SKU_KEY\r
+
+      )\r
+
+      ORDER BY P.PRD_NOME;\r
+
+      /"
+    languageId: oracle-sql
+  - kind: 2
+    value: "-- Consulta 4 - ITENS MAIS VENDIDOS NO HISTORICO POR QUANTIDADE\r
+
+      \r
+
+      SELECT\r
+
+      \    S.SKU_KEY               AS SKU,\r
+
+      \    P.PRD_NOME              AS PRODUTO,\r
+
+      \    SUM(HIV.HITVND_QTDE)    AS TOTAL_UNIDADES,\r
+
+      \    SUM(HIV.HITVND_VALOR)   AS RECEITA_TOTAL\r
+
+      FROM HITEM_VENDA HIV\r
+
+      INNER JOIN SKU     S ON S.SKU_ID  = HIV.HITVND_SKU_ID\r
+
+      INNER JOIN PRODUTO P ON P.PRD_ID  = S.SKU_PRD_ID\r
+
+      GROUP BY S.SKU_KEY, P.PRD_NOME\r
+
+      ORDER BY TOTAL_UNIDADES DESC;\r
+
+      /"
+    languageId: oracle-sql
+  - kind: 1
+    value: "## Consultas Henrique Chiosani\r\n"
+    languageId: markdown
+  - kind: 2
+    value: "-- Consulta 5 - CANAIS COM MAIOR NUMERO DE PEDIDOS NO HISTORICO\r
+
+      \r
+
+      SELECT\r
+
+      \    TO_CHAR(TRUNC(V.DATA_VENDA, 'MM'), 'YYYY-MM') AS MES,\r
+
+      \    C.CAN_NOME                                    AS CANAL,\r
+
+      \    COUNT(V.ID)                                   AS TOTAL_PEDIDOS,\r
+
+      \    SUM(V.VALOR_TOTAL)                            AS RECEITA_TOTAL\r
+
+      FROM (\r
+
+      \    SELECT VND_ID AS ID,\r
+
+      \           VND_CAN_ID AS CAN_ID,\r
+
+      \           VND_DATA_VENDA AS DATA_VENDA,\r
+
+      \           VND_VALOR_TOTAL AS VALOR_TOTAL\r
+
+      \    FROM VENDA\r
+
+      \r
+
+      \    UNION ALL\r
+
+      \r
+
+      \    SELECT HVND_ID,\r
+
+      \           HVND_CAN_ID,\r
+
+      \           HVND_DATA_VENDA,\r
+
+      \           HVND_VALOR_TOTAL\r
+
+      \    FROM HVENDA\r
+
+      ) V\r
+
+      INNER JOIN CANAL C ON C.CAN_ID = V.CAN_ID\r
+
+      GROUP BY \r
+
+      \    TRUNC(V.DATA_VENDA, 'MM'),\r
+
+      \    C.CAN_NOME\r
+
+      ORDER BY \r
+
+      \    MES,\r
+
+      \    TOTAL_PEDIDOS DESC;\r
+
+      \r
+
+      -- TOTAL DE PEDIDOS POR PERIODO,  SEPARADO POR PERIODO\r
+
+      /\r\n"
+    languageId: oracle-sql
+  - kind: 2
+    value: "SELECT TO_CHAR(TRUNC(v.VND_DATA_VENDA, 'MM'), 'YYYY-MM') AS mes,\r
+
+      \       COUNT(*)                                          AS pedidos,\r
+
+      \       TO_CHAR(SUM(v.VND_VALOR_TOTAL), 'L999G999G999D99') AS receita\r
+
+      FROM (\r
+
+      \    SELECT VND_DATA_VENDA, VND_VALOR_TOTAL\r
+
+      \    FROM VENDA\r
+
+      \r
+
+      \    UNION ALL\r
+
+      \r
+
+      \    SELECT HVND_DATA_VENDA, HVND_VALOR_TOTAL\r
+
+      \    FROM HVENDA\r
+
+      ) v\r
+
+      GROUP BY TRUNC(v.VND_DATA_VENDA, 'MM')\r
+
+      ORDER BY mes;\r
+
+      /"
+    languageId: oracle-sql
+  - kind: 1
+    value: "## Consultas Rafaela Nunes\r\n"
+    languageId: markdown
+  - kind: 2
+    value: "--  Consulta 7 - PEDIDOS HISTORICOS COM VALOR ACIMA DA MEDIA\r
+
+      \r
+
+      SELECT\r
+
+      \    HV.HVND_PEDIDO                      AS PEDIDO,\r
+
+      \    L.LOJ_NOME                          AS LOJA,\r
+
+      \    C.CAN_NOME                          AS CANAL,\r
+
+      \    TO_CHAR(HV.HVND_DATA_VENDA, 'DD/MM/YYYY') AS DATA_VENDA,\r
+
+      \    HV.HVND_VALOR_TOTAL                 AS VALOR_TOTAL\r
+
+      FROM HVENDA HV\r
+
+      INNER JOIN LOJA  L ON L.LOJ_ID = HV.HVND_LOJ_ID\r
+
+      INNER JOIN CANAL C ON C.CAN_ID = HV.HVND_CAN_ID\r
+
+      WHERE HV.HVND_VALOR_TOTAL > (\r
+
+      \    SELECT AVG(HVND_VALOR_TOTAL)\r
+
+      \    FROM HVENDA\r
+
+      )\r
+
+      ORDER BY HV.HVND_VALOR_TOTAL DESC;\r
+
+      /"
+    languageId: oracle-sql
+  - kind: 2
+    value: "-- Consulta 8 - COMPARATIVO: MES ATUAL vs HISTORICO POR CANAL\r
+
+      \r
+
+      SELECT\r
+
+      \    C.CAN_NOME                              AS CANAL,\r
+
+      \    NVL(AT.RECEITA_ATUAL,   0)              AS RECEITA_MES_ATUAL,\r
+
+      \    NVL(HT.RECEITA_HISTORICO, 0)            AS RECEITA_HISTORICO,\r
+
+      \    ROUND(\r
+
+      \        NVL(AT.RECEITA_ATUAL, 0)\r
+
+      \        / NULLIF(NVL(HT.RECEITA_HISTORICO, 0), 0) * 100\r
+
+      \    , 2)                                    AS
+      PCT_ATUAL_SOBRE_HISTORICO\r
+
+      FROM CANAL C\r
+
+      LEFT JOIN (\r
+
+      \    SELECT VND_CAN_ID, SUM(VND_VALOR_TOTAL) AS RECEITA_ATUAL\r
+
+      \    FROM VENDA\r
+
+      \    GROUP BY VND_CAN_ID\r
+
+      ) AT ON AT.VND_CAN_ID = C.CAN_ID\r
+
+      LEFT JOIN (\r
+
+      \    SELECT HVND_CAN_ID, SUM(HVND_VALOR_TOTAL) AS RECEITA_HISTORICO\r
+
+      \    FROM HVENDA\r
+
+      \    GROUP BY HVND_CAN_ID\r
+
+      ) HT ON HT.HVND_CAN_ID = C.CAN_ID\r
+
+      WHERE AT.VND_CAN_ID  IS NOT NULL\r
+
+      \   OR HT.HVND_CAN_ID IS NOT NULL\r
+
+      ORDER BY RECEITA_HISTORICO DESC;\r
+
+      \r
+
+      -- SEPARAR POR PERIODO\r
+
+      /"
+    languageId: oracle-sql

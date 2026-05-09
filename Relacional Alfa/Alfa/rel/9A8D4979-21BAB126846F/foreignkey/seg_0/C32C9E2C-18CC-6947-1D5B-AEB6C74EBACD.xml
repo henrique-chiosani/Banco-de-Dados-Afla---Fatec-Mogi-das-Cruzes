@@ -1,0 +1,19 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<FKIndexAssociation class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_0" id="C32C9E2C-18CC-6947-1D5B-AEB6C74EBACD" containerWithKeyObject="38699B0E-3E9B-8F5F-B9BA-30914C249456" localFKIndex="5DA7AC0D-914A-E0EF-F50E-2A992483F93D" name="FK_ITVND_VND">
+<sourceConnName>Alfa</sourceConnName>
+<sourceObjSchema>ALFA</sourceObjSchema>
+<sourceObjName>FK_ITVND_VND</sourceObjName>
+<createdBy>Henrique Chiosani</createdBy>
+<createdTime>2026-04-10 01:49:38 UTC</createdTime>
+<ownerDesignName>Alfa</ownerDesignName>
+<referredTableLongName>ALFA.VENDA</referredTableLongName>
+<deleteRule>NO ACTION</deleteRule>
+<referredTableID>8F0E1411-5524-6E4A-8865-F787AAC9D593</referredTableID>
+<keyObject>8550CD59-03AB-1950-5F06-E5188DEC14B4</keyObject>
+<referredKeyID>8550CD59-03AB-1950-5F06-E5188DEC14B4</referredKeyID>
+<mandatory>true</mandatory>
+<refColNames>VND_ID</refColNames>
+<transferable>true</transferable>
+<rely>false</rely>
+<columnDependencyConstraintGenerateInDDL>true</columnDependencyConstraintGenerateInDDL>
+</FKIndexAssociation>

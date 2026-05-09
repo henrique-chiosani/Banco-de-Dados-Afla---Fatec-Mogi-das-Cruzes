@@ -1,0 +1,8 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<OSDM_Design class="oracle.dbtools.crest.model.design.Design" name="Alfa" id="DA0884A5-D6B2-B895-378A-E9950519C2F3" version="3.5">
+<createdBy>Henrique Chiosani</createdBy>
+<createdTime>2026-04-10 01:44:27 UTC</createdTime>
+<ownerDesignName>Alfa</ownerDesignName>
+<capitalNames>false</capitalNames>
+<designId>DA0884A5-D6B2-B895-378A-E9950519C2F3</designId>
+</OSDM_Design>

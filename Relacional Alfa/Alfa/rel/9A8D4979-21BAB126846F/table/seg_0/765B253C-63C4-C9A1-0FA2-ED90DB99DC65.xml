@@ -1,0 +1,167 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="765B253C-63C4-C9A1-0FA2-ED90DB99DC65" schemaObject="6A3EA8A7-BFE6-837D-A34E-84458FF73ABF" name="STG_ALFA">
+<sourceConnName>Alfa</sourceConnName>
+<sourceObjSchema>ALFA</sourceObjSchema>
+<sourceObjName>STG_ALFA</sourceObjName>
+<createdBy>Henrique Chiosani</createdBy>
+<createdTime>2026-04-10 01:49:35 UTC</createdTime>
+<ownerDesignName>Alfa</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="PEDIDO_STG" id="CFF40405-58EF-B679-0FE7-8BDE7F5B8B6F">
+<sourceConnName>Alfa</sourceConnName>
+<sourceObjSchema>STG_ALFA</sourceObjSchema>
+<sourceObjName>PEDIDO_STG</sourceObjName>
+<createdBy>Henrique Chiosani</createdBy>
+<createdTime>2026-04-10 01:49:35 UTC</createdTime>
+<ownerDesignName>Alfa</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>15 BYTE</dataTypeSize>
+<ownDataTypeParameters>15 BYTE,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="MKP_STG" id="D4E89D38-F687-FFCE-FE1F-57BE62AA5F74">
+<sourceConnName>Alfa</sourceConnName>
+<sourceObjSchema>STG_ALFA</sourceObjSchema>
+<sourceObjName>MKP_STG</sourceObjName>
+<createdBy>Henrique Chiosani</createdBy>
+<createdTime>2026-04-10 01:49:35 UTC</createdTime>
+<ownerDesignName>Alfa</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>100 BYTE</dataTypeSize>
+<ownDataTypeParameters>100 BYTE,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="DATA_PEDIDO_STG" id="5B29616D-81DB-4D67-B017-B8AD896833D6">
+<sourceConnName>Alfa</sourceConnName>
+<sourceObjSchema>STG_ALFA</sourceObjSchema>
+<sourceObjName>DATA_PEDIDO_STG</sourceObjName>
+<createdBy>Henrique Chiosani</createdBy>
+<createdTime>2026-04-10 01:49:35 UTC</createdTime>
+<ownerDesignName>Alfa</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<dataTypeSize>7</dataTypeSize>
+<ownDataTypeParameters>7,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="DESCRICAO_STG" id="FDE9387F-513F-6A3C-5A5A-0057D95D509C">
+<sourceConnName>Alfa</sourceConnName>
+<sourceObjSchema>STG_ALFA</sourceObjSchema>
+<sourceObjName>DESCRICAO_STG</sourceObjName>
+<createdBy>Henrique Chiosani</createdBy>
+<createdTime>2026-04-10 01:49:35 UTC</createdTime>
+<ownerDesignName>Alfa</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>100 BYTE</dataTypeSize>
+<ownDataTypeParameters>100 BYTE,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="SKU_STG" id="821EE529-B0F6-61FD-5A1D-C202EEE4F9B2">
+<sourceConnName>Alfa</sourceConnName>
+<sourceObjSchema>STG_ALFA</sourceObjSchema>
+<sourceObjName>SKU_STG</sourceObjName>
+<createdBy>Henrique Chiosani</createdBy>
+<createdTime>2026-04-10 01:49:35 UTC</createdTime>
+<ownerDesignName>Alfa</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>25 BYTE</dataTypeSize>
+<ownDataTypeParameters>25 BYTE,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="QTDE_STG" id="10C8D71C-E40B-2245-0CE8-7493FAEC8F7C">
+<sourceConnName>Alfa</sourceConnName>
+<sourceObjSchema>STG_ALFA</sourceObjSchema>
+<sourceObjName>QTDE_STG</sourceObjName>
+<createdBy>Henrique Chiosani</createdBy>
+<createdTime>2026-04-10 01:49:35 UTC</createdTime>
+<ownerDesignName>Alfa</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>6</dataTypePrecision>
+<dataTypeScale>0</dataTypeScale>
+<ownDataTypeParameters>,6,0</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="VALOR_STG" id="F5EE6716-B505-5569-451A-ED3B759DCDE4">
+<sourceConnName>Alfa</sourceConnName>
+<sourceObjSchema>STG_ALFA</sourceObjSchema>
+<sourceObjName>VALOR_STG</sourceObjName>
+<createdBy>Henrique Chiosani</createdBy>
+<createdTime>2026-04-10 01:49:35 UTC</createdTime>
+<ownerDesignName>Alfa</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>12</dataTypePrecision>
+<dataTypeScale>2</dataTypeScale>
+<ownDataTypeParameters>,12,2</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="CUSTO_STG" id="73580DFB-D4A9-744A-54A0-D5798D69084E">
+<sourceConnName>Alfa</sourceConnName>
+<sourceObjSchema>STG_ALFA</sourceObjSchema>
+<sourceObjName>CUSTO_STG</sourceObjName>
+<createdBy>Henrique Chiosani</createdBy>
+<createdTime>2026-04-10 01:49:35 UTC</createdTime>
+<ownerDesignName>Alfa</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>12</dataTypePrecision>
+<dataTypeScale>2</dataTypeScale>
+<ownDataTypeParameters>,12,2</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="LOJA_STG" id="B839F755-5D3D-EA09-1186-6EB7B0CF8FC3">
+<sourceConnName>Alfa</sourceConnName>
+<sourceObjSchema>STG_ALFA</sourceObjSchema>
+<sourceObjName>LOJA_STG</sourceObjName>
+<createdBy>Henrique Chiosani</createdBy>
+<createdTime>2026-04-10 01:49:35 UTC</createdTime>
+<ownerDesignName>Alfa</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>50 BYTE</dataTypeSize>
+<ownDataTypeParameters>50 BYTE,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="CANAL_STG" id="990EB3A9-AF5D-86DC-202B-EF01B23248CC">
+<sourceConnName>Alfa</sourceConnName>
+<sourceObjSchema>STG_ALFA</sourceObjSchema>
+<sourceObjName>CANAL_STG</sourceObjName>
+<createdBy>Henrique Chiosani</createdBy>
+<createdTime>2026-04-10 01:49:35 UTC</createdTime>
+<ownerDesignName>Alfa</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>50 BYTE</dataTypeSize>
+<ownDataTypeParameters>50 BYTE,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+</Table>

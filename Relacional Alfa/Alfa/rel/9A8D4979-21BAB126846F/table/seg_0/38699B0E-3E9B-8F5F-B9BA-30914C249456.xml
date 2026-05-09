@@ -1,0 +1,157 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="38699B0E-3E9B-8F5F-B9BA-30914C249456" schemaObject="6A3EA8A7-BFE6-837D-A34E-84458FF73ABF" name="ITEM_VENDA">
+<sourceConnName>Alfa</sourceConnName>
+<sourceObjSchema>ALFA</sourceObjSchema>
+<sourceObjName>ITEM_VENDA</sourceObjName>
+<createdBy>Henrique Chiosani</createdBy>
+<createdTime>2026-04-10 01:49:35 UTC</createdTime>
+<commentInRDBMS><![CDATA[TABELA REFERENTE AOS ITENS PRESENTES NAS VENDAS]]></commentInRDBMS>
+<ownerDesignName>Alfa</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="ITVND_VND_ID" id="CD2E5152-273D-A38C-0B11-1444549CB211">
+<sourceConnName>Alfa</sourceConnName>
+<sourceObjSchema>ITEM_VENDA</sourceObjSchema>
+<sourceObjName>ITVND_VND_ID</sourceObjName>
+<createdBy>Henrique Chiosani</createdBy>
+<createdTime>2026-04-10 01:49:35 UTC</createdTime>
+<commentInRDBMS><![CDATA[COLUNA REFERENTE A CHAVE PRIMARIA COMPOSTA E ESTRANGEIRA REFERENCIADA PELA TABELA VENDAS]]></commentInRDBMS>
+<ownerDesignName>Alfa</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>6</dataTypePrecision>
+<dataTypeScale>0</dataTypeScale>
+<ownDataTypeParameters>,6,0</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<notNullConstraintName>CK_ITVND_NN_01</notNullConstraintName>
+<associations>
+<colAssociation fkAssociation="C32C9E2C-18CC-6947-1D5B-AEB6C74EBACD" referredColumn="CD0FD74D-3766-EC0E-3ED8-B6BDC02A6D64"/>
+</associations>
+</Column>
+<Column name="ITVND_SKU_ID" id="06658E6F-7859-9F16-A25B-CD3D2F1012DB">
+<sourceConnName>Alfa</sourceConnName>
+<sourceObjSchema>ITEM_VENDA</sourceObjSchema>
+<sourceObjName>ITVND_SKU_ID</sourceObjName>
+<createdBy>Henrique Chiosani</createdBy>
+<createdTime>2026-04-10 01:49:35 UTC</createdTime>
+<commentInRDBMS><![CDATA[COLUNA REFERENTE A CHAVE PRIMARIA COMPOSTA E ESTRANGEIRA REFERENCIADA PELA TABELA SKU]]></commentInRDBMS>
+<ownerDesignName>Alfa</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>6</dataTypePrecision>
+<dataTypeScale>0</dataTypeScale>
+<ownDataTypeParameters>,6,0</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<notNullConstraintName>CK_ITVND_NN_02</notNullConstraintName>
+<associations>
+<colAssociation fkAssociation="B4A1F675-30C8-B38C-AD35-57ECB1243B81" referredColumn="E23A0134-1558-3745-FDF5-00A0BBE4EE65"/>
+</associations>
+</Column>
+<Column name="ITVND_QTDE" id="0584838F-59BA-0B0F-26F7-F39F430DE819">
+<sourceConnName>Alfa</sourceConnName>
+<sourceObjSchema>ITEM_VENDA</sourceObjSchema>
+<sourceObjName>ITVND_QTDE</sourceObjName>
+<createdBy>Henrique Chiosani</createdBy>
+<createdTime>2026-04-10 01:49:35 UTC</createdTime>
+<commentInRDBMS><![CDATA[COLUNA REFERENTE A QUANTIDADE DE ITENS]]></commentInRDBMS>
+<ownerDesignName>Alfa</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>6</dataTypePrecision>
+<dataTypeScale>0</dataTypeScale>
+<ownDataTypeParameters>,6,0</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<notNullConstraintName>CK_ITVND_NN_03</notNullConstraintName>
+</Column>
+<Column name="ITVND_CUSTO" id="D89EF956-F3B2-FF70-FA6E-AE36A0C66FB3">
+<sourceConnName>Alfa</sourceConnName>
+<sourceObjSchema>ITEM_VENDA</sourceObjSchema>
+<sourceObjName>ITVND_CUSTO</sourceObjName>
+<createdBy>Henrique Chiosani</createdBy>
+<createdTime>2026-04-10 01:49:35 UTC</createdTime>
+<commentInRDBMS><![CDATA[CUSTO REFERENTE AO PRODUTO NO MOMENTO DA VENDA]]></commentInRDBMS>
+<ownerDesignName>Alfa</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>12</dataTypePrecision>
+<dataTypeScale>2</dataTypeScale>
+<ownDataTypeParameters>,12,2</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<notNullConstraintName>CK_ITVND_NN_04</notNullConstraintName>
+</Column>
+<Column name="ITVND_VALOR" id="1CF133EF-54EA-F933-E1E4-96C84A448F3E">
+<sourceConnName>Alfa</sourceConnName>
+<sourceObjSchema>ITEM_VENDA</sourceObjSchema>
+<sourceObjName>ITVND_VALOR</sourceObjName>
+<createdBy>Henrique Chiosani</createdBy>
+<createdTime>2026-04-10 01:49:35 UTC</createdTime>
+<commentInRDBMS><![CDATA[COLUNA REFERENTE AO VALOR TOTAL DOS ITENS]]></commentInRDBMS>
+<ownerDesignName>Alfa</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>12</dataTypePrecision>
+<dataTypeScale>2</dataTypeScale>
+<ownDataTypeParameters>,12,2</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<notNullConstraintName>CK_ITVND_NN_05</notNullConstraintName>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="3D489224-1B11-3537-AA26-26D4F23B0A2E" name="PK_ITVND">
+<sourceConnName>Alfa</sourceConnName>
+<sourceObjSchema>ALFA</sourceObjSchema>
+<sourceObjName>PK_ITVND</sourceObjName>
+<createdBy>Henrique Chiosani</createdBy>
+<createdTime>2026-04-10 01:49:38 UTC</createdTime>
+<ownerDesignName>Alfa</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="CD2E5152-273D-A38C-0B11-1444549CB211"/>
+<colUsage columnID="06658E6F-7859-9F16-A25B-CD3D2F1012DB"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="3E185360-9AB9-40F5-A4F1-A27E37EC0502" schemaObject="6A3EA8A7-BFE6-837D-A34E-84458FF73ABF" name="PK_ITVND">
+<sourceConnName>Alfa</sourceConnName>
+<sourceObjSchema>ALFA</sourceObjSchema>
+<sourceObjName>PK_ITVND</sourceObjName>
+<createdBy>Henrique Chiosani</createdBy>
+<createdTime>2026-04-10 01:49:38 UTC</createdTime>
+<ownerDesignName>Alfa</ownerDesignName>
+<indexState>Unique Plain Index</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="CD2E5152-273D-A38C-0B11-1444549CB211"/>
+<colUsage columnID="06658E6F-7859-9F16-A25B-CD3D2F1012DB"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="E9BA4B85-1528-E98A-EA06-318D71D369B6" name="FK_ITVND_SKU">
+<createdBy>Henrique Chiosani</createdBy>
+<createdTime>2026-04-10 01:49:38 UTC</createdTime>
+<ownerDesignName>Alfa</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="06658E6F-7859-9F16-A25B-CD3D2F1012DB"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="5DA7AC0D-914A-E0EF-F50E-2A992483F93D" name="FK_ITVND_VND">
+<createdBy>Henrique Chiosani</createdBy>
+<createdTime>2026-04-10 01:49:38 UTC</createdTime>
+<ownerDesignName>Alfa</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="CD2E5152-273D-A38C-0B11-1444549CB211"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

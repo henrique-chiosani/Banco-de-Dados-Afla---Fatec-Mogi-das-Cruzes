@@ -1,0 +1,345 @@
+cells:
+  - kind: 1
+    value: "# Consultas SQL \r
+
+      \r
+
+      > Adriana Diogenes\r
+
+      \r
+
+      > Guilherme Prado\r
+
+      \r
+
+      > Henrique Chiosani\r
+
+      \r
+
+      > Rafaela Nunes"
+    languageId: markdown
+  - kind: 1
+    value: "## Consultas - Adriana Diogenes\r
+
+      \r
+
+      > 1. FATURAMENTO POR LOJA\r
+
+      > 2. CANAL COM MAIOR VENDAS POR LOJA"
+    languageId: markdown
+  - kind: 2
+    value: "-- FATURAMENTO POR LOJA\r
+
+      \r
+
+      SELECT \r
+
+      \    LOJ_NOME AS NOME,\r
+
+      \    'R$ ' || TO_CHAR(SUM(VND_VALOR_TOTAL), 'FM999G999G990D00') AS
+      FATURAMENTO\r
+
+      FROM VENDA\r
+
+      INNER JOIN LOJA ON LOJA.LOJ_ID = VENDA.VND_LOJ_ID\r
+
+      GROUP BY LOJA.LOJ_NOME\r
+
+      ORDER BY FATURAMENTO DESC;"
+    languageId: oracle-sql
+  - kind: 2
+    value: "-- CANAL COM MAIOR VENDAS POR LOJA\r
+
+      \r
+
+      SELECT\r
+
+      \    LOJA,\r
+
+      \    CANAL,\r
+
+      \    'R$ ' || TO_CHAR(TOTAL_FATURAMENTO, 'FM999G999G990D00') AS
+      FATURAMENTO\r
+
+      FROM (\r
+
+      \    SELECT \r
+
+      \        L.LOJ_NOME                                          AS LOJA,\r
+
+      \        C.CAN_NOME                                          AS CANAL,\r
+
+      \        SUM(V.VND_VALOR_TOTAL)                              AS
+      TOTAL_FATURAMENTO,\r
+
+      \        MAX(SUM(V.VND_VALOR_TOTAL)) OVER (PARTITION BY L.LOJ_NOME) AS
+      MAX_LOJA\r
+
+      \    FROM VENDA V\r
+
+      \    INNER JOIN LOJA  L ON L.LOJ_ID = V.VND_LOJ_ID\r
+
+      \    INNER JOIN CANAL C ON C.CAN_ID = V.VND_CAN_ID\r
+
+      \    GROUP BY L.LOJ_NOME, C.CAN_NOME\r
+
+      )\r
+
+      WHERE TOTAL_FATURAMENTO = MAX_LOJA\r
+
+      ORDER BY TOTAL_FATURAMENTO DESC;"
+    languageId: oracle-sql
+  - kind: 1
+    value: "## Consultas - Guilherme Prado\r
+
+      \r
+
+      > 1. ITENS COM MENOR FATURAMENTO\r
+
+      > 2. PIOR PRODUTO DE CADA CANAL"
+    languageId: markdown
+  - kind: 2
+    value: "-- ITENS COM MENOR FATURAMENTO\r
+
+      \r
+
+      SELECT PRD_NOME AS PRODUTO,\r
+
+      \      'R$ ' || TO_CHAR(SUM (ITEM_VENDA.ITVND_VALOR), 'FM999G999G990D00')
+      AS  \"VALOR TOTAL\"\r
+
+      FROM ITEM_VENDA\r
+
+      JOIN SKU ON SKU.SKU_ID = ITEM_VENDA.ITVND_SKU_ID\r
+
+      JOIN PRODUTO ON PRODUTO.PRD_ID = SKU.SKU_PRD_ID\r
+
+      GROUP BY PRODUTO.PRD_NOME \r
+
+      ORDER BY \"VALOR TOTAL\" ASC\r\n"
+    languageId: oracle-sql
+  - kind: 2
+    value: "-- PIOR PRODUTO DE CADA CANAL\r
+
+      \r
+
+      SELECT\r
+
+      \    CAN.CAN_NOME                AS CANAL,\r
+
+      \    PRD.PRD_NOME                AS PRODUTO,\r
+
+      \    'R$ ' || TO_CHAR(SUM(ITV.ITVND_VALOR), 'FM999G999G990D00') AS \"TOTAL
+      DE VENDA\"\r
+
+      FROM ITEM_VENDA  ITV\r
+
+      INNER JOIN SKU     SKU ON SKU.SKU_ID     = ITV.ITVND_SKU_ID\r
+
+      INNER JOIN PRODUTO PRD ON PRD.PRD_ID     = SKU.SKU_PRD_ID\r
+
+      INNER JOIN VENDA   VND ON VND.VND_ID     = ITV.ITVND_VND_ID\r
+
+      INNER JOIN CANAL   CAN ON CAN.CAN_ID     = VND.VND_CAN_ID\r
+
+      WHERE PRD.PRD_NOME IN (\r
+
+      \    SELECT PRD_NOME\r
+
+      \    FROM (\r
+
+      \        SELECT\r
+
+      \            PRD2.PRD_NOME,\r
+
+      \            SUM(ITV2.ITVND_VALOR) AS TOTAL\r
+
+      \        FROM ITEM_VENDA  ITV2\r
+
+      \        INNER JOIN SKU     SKU2 ON SKU2.SKU_ID = ITV2.ITVND_SKU_ID\r
+
+      \        INNER JOIN PRODUTO PRD2 ON PRD2.PRD_ID = SKU2.SKU_PRD_ID\r
+
+      \        GROUP BY PRD2.PRD_NOME\r
+
+      \        ORDER BY TOTAL ASC\r
+
+      \    )\r
+
+      \r
+
+      )\r
+
+      GROUP BY CAN.CAN_NOME, PRD.PRD_NOME\r
+
+      ORDER BY PRD.PRD_NOME, \"TOTAL DE VENDA\" ASC;"
+    languageId: oracle-sql
+  - kind: 1
+    value: "## Consultas - Henrique Chiosani\r
+
+      \r
+
+      > 1. QUANTIDADE DE PRODUTOS DIFERENTES VENDIDOS POR CANAL\r
+
+      > 2. PRODUTOS EXCLUSIVOS DE UM CANAL"
+    languageId: markdown
+  - kind: 2
+    value: "-- QUANTIDADE DE PRODUTOS DIFERENTES VENDIDOS POR CANAL\r
+
+      \r
+
+      SELECT \r
+
+      \    C.CAN_NOME AS CANAIS,\r
+
+      \    COUNT(DISTINCT P.PRD_NOME) AS \"QUANTIDADE DE PRODUTOS\"     \r
+
+      FROM\r
+
+      \    ITEM_VENDA ITVND\r
+
+      \    FULL JOIN VENDA V\r
+
+      \        ON V.VND_ID = ITVND.ITVND_VND_ID\r
+
+      \    FULL JOIN CANAL C\r
+
+      \        ON C.CAN_ID = V.VND_CAN_ID\r
+
+      \    FULL JOIN SKU S\r
+
+      \        ON S.SKU_ID = ITVND.ITVND_SKU_ID\r
+
+      \    FULL JOIN PRODUTO P\r
+
+      \        ON P.PRD_ID = S.SKU_PRD_ID\r
+
+      WHERE \r
+
+      \    C.CAN_NOME IS NOT NULL\r
+
+      GROUP BY\r
+
+      \    C.CAN_NOME\r
+
+      HAVING \r
+
+      \    COUNT(DISTINCT P.PRD_NOME) > 0\r
+
+      ORDER BY\r
+
+      \    \"QUANTIDADE DE PRODUTOS\" DESC;\r\n"
+    languageId: oracle-sql
+  - kind: 2
+    value: "-- RODUTOS EXCLUSIVOS DE UM CANAL\r
+
+      \r
+
+      SELECT \r
+
+      \    P.PRD_NOME AS PRODUTO,\r
+
+      \    MIN(C.CAN_NOME) AS CANAL\r
+
+      FROM\r
+
+      \    ITEM_VENDA ITVND\r
+
+      \    JOIN VENDA V\r
+
+      \        ON V.VND_ID = ITVND.ITVND_VND_ID\r
+
+      \    JOIN CANAL C\r
+
+      \        ON C.CAN_ID = V.VND_CAN_ID\r
+
+      \    JOIN SKU S\r
+
+      \        ON S.SKU_ID = ITVND.ITVND_SKU_ID\r
+
+      \    JOIN PRODUTO P\r
+
+      \        ON P.PRD_ID = S.SKU_PRD_ID\r
+
+      GROUP BY\r
+
+      \    P.PRD_NOME\r
+
+      HAVING \r
+
+      \    COUNT(DISTINCT C.CAN_NOME) = 1\r
+
+      ORDER BY CANAL;"
+    languageId: oracle-sql
+  - kind: 1
+    value: "## Consultas - Rafaela Nunes\r
+
+      \r
+
+      > 1. FATURAMENTO POR CANAL\r
+
+      > 2. RANKIN DE PRODUTO POR CANAL"
+    languageId: markdown
+  - kind: 2
+    value: "--FATURAMENTO POR CANAL\r
+
+      \r
+
+      SELECT \r
+
+      \    CANAL.CAN_NOME, \r
+
+      \   TO_CHAR(SUM(VND_VALOR_TOTAL), 'L999G999G990D00') AS
+      TOTAL_FATURAMENTO\r
+
+      FROM VENDA\r
+
+      INNER JOIN CANAL \r
+
+      \    ON CANAL.CAN_ID = VENDA.VND_CAN_ID\r
+
+      GROUP BY CANAL.CAN_NOME;"
+    languageId: oracle-sql
+  - kind: 2
+    value: "--Rankin de produtos por canal\r
+
+      \r
+
+      SELECT *\r
+
+      FROM (\r
+
+      \    SELECT\r
+
+      \        CAN.CAN_NOME AS CANAL,\r
+
+      \        PRD.PRD_NOME AS PRODUTO,\r
+
+      \        SUM(ITVND.ITVND_QTDE) AS \"QUANTIDADE TOTAL\",\r
+
+      \        ROW_NUMBER() OVER (\r
+
+      \            PARTITION BY CAN.CAN_NOME \r
+
+      \            ORDER BY SUM(ITVND.ITVND_QTDE) DESC\r
+
+      \        ) AS RN\r
+
+      \    FROM ITEM_VENDA ITVND\r
+
+      \    JOIN VENDA VND ON VND.VND_ID = ITVND.ITVND_VND_ID\r
+
+      \    JOIN CANAL CAN ON CAN.CAN_ID = VND.VND_CAN_ID\r
+
+      \    JOIN SKU SKU ON SKU.SKU_ID = ITVND.ITVND_SKU_ID\r
+
+      \    JOIN PRODUTO PRD ON PRD.PRD_ID = SKU.SKU_PRD_ID\r
+
+      \    GROUP BY CAN.CAN_NOME, PRD.PRD_NOME\r
+
+      )\r
+
+      WHERE RN <= 5\r
+
+      ORDER BY CANAL, \"QUANTIDADE TOTAL\" DESC;"
+    languageId: oracle-sql

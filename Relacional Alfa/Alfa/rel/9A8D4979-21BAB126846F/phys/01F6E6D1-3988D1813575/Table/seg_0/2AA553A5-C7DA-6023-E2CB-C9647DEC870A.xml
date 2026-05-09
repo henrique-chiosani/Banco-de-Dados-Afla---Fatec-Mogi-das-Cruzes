@@ -1,0 +1,75 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<TableProxyOraclev20c class="oracle.dbtools.crest.model.design.storage.oracle.v20c.TableProxyOraclev20c" name="HVENDA" directorySegmentName="seg_0" id="2AA553A5-C7DA-6023-E2CB-C9647DEC870A">
+<createdBy>Henrique Chiosani</createdBy>
+<createdTime>2026-04-10 01:49:35 UTC</createdTime>
+<ownerDesignName>Alfa</ownerDesignName>
+<schemaObject>6A3EA8A7-BFE6-837D-A34E-84458FF73ABF</schemaObject>
+<logging>YES</logging>
+<partitionedRowMovement>DISABLE</partitionedRowMovement>
+<segment>8C0D6BC2-D846-D555-3A4F-0F941D1A7C96</segment>
+<tableSpace>98860CC6-5DE0-5D9D-EB91-E12A23142F2C</tableSpace>
+<temporaryChanged>false</temporaryChanged>
+<accessDriverType>oracle_loader</accessDriverType>
+<rejectLimit></rejectLimit>
+<inMemory>NO</inMemory>
+<columnProxies itemClass="oracle.dbtools.crest.model.design.storage.oracle.v12c.ColumnProxyOraclev12c">
+<ColumnProxy name="HVND_LOJ_ID" id="1FC46597-4048-851B-3768-029CCB4515F0">
+<createdBy>Henrique Chiosani</createdBy>
+<createdTime>2026-04-10 01:49:35 UTC</createdTime>
+<ownerDesignName>Alfa</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="HVND_PEDIDO" id="3D455257-AF4C-7E6E-EB44-EDB2D106E2C3">
+<createdBy>Henrique Chiosani</createdBy>
+<createdTime>2026-04-10 01:49:35 UTC</createdTime>
+<ownerDesignName>Alfa</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="HVND_DATA_VENDA" id="3EF55F2A-B04C-6E9F-011B-B0B713D35B74">
+<createdBy>Henrique Chiosani</createdBy>
+<createdTime>2026-04-10 01:49:35 UTC</createdTime>
+<ownerDesignName>Alfa</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="HVND_VALOR_TOTAL" id="5484410D-ABDD-994E-F275-29439C485A4D">
+<createdBy>Henrique Chiosani</createdBy>
+<createdTime>2026-04-10 01:49:35 UTC</createdTime>
+<ownerDesignName>Alfa</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="HVND_DATE" id="7AA86015-745B-8BED-FB77-E2A064D10471">
+<createdBy>Henrique Chiosani</createdBy>
+<createdTime>2026-04-10 01:49:35 UTC</createdTime>
+<ownerDesignName>Alfa</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="HVND_ID" id="C2EB8908-B44D-1898-A3DD-5419364EF9AE">
+<createdBy>Henrique Chiosani</createdBy>
+<createdTime>2026-04-10 01:49:35 UTC</createdTime>
+<ownerDesignName>Alfa</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="HVND_CAN_ID" id="E89C30ED-2B8C-E4A5-DED5-E1B679AEE99B">
+<createdBy>Henrique Chiosani</createdBy>
+<createdTime>2026-04-10 01:49:35 UTC</createdTime>
+<ownerDesignName>Alfa</ownerDesignName>
+</ColumnProxy>
+</columnProxies>
+<indexProxies>
+<IndexProxy class="oracle.dbtools.crest.model.design.storage.oracle.v10g.IndexProxyOraclev10g" name="PK_HVND" id="8EB3E83A-D411-601A-68EE-3C1B8CF0263F">
+<createdBy>Henrique Chiosani</createdBy>
+<createdTime>2026-04-10 01:49:38 UTC</createdTime>
+<ownerDesignName>Alfa</ownerDesignName>
+<schemaObject>6A3EA8A7-BFE6-837D-A34E-84458FF73ABF</schemaObject>
+<segment>C19536ED-A232-701D-2513-0C59033E3D34</segment>
+<tableSpace>98860CC6-5DE0-5D9D-EB91-E12A23142F2C</tableSpace>
+</IndexProxy>
+</indexProxies>
+<primaryKeys>
+<PrimaryKey class="oracle.dbtools.crest.model.design.storage.oracle.v10g.PKProxyOraclev10g" name="PK_HVND" id="1B65CBFC-0496-F0A3-C06F-56E9104F7745">
+<createdBy>Henrique Chiosani</createdBy>
+<createdTime>2026-04-10 01:49:38 UTC</createdTime>
+<ownerDesignName>Alfa</ownerDesignName>
+<segment>C19536ED-A232-701D-2513-0C59033E3D34</segment>
+<tableSpace>98860CC6-5DE0-5D9D-EB91-E12A23142F2C</tableSpace>
+<existingIndex>8EB3E83A-D411-601A-68EE-3C1B8CF0263F</existingIndex>
+<indexSegment>C19536ED-A232-701D-2513-0C59033E3D34</indexSegment>
+<indexSort>SORTED</indexSort>
+<usingIndex>BY INDEX NAME</usingIndex>
+</PrimaryKey>
+</primaryKeys>
+</TableProxyOraclev20c>

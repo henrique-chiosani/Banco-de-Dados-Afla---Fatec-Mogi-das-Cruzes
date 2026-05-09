@@ -1,0 +1,76 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="915AF213-6213-B309-DD40-1830F868A2BC" schemaObject="6A3EA8A7-BFE6-837D-A34E-84458FF73ABF" name="LOJA">
+<sourceConnName>Alfa</sourceConnName>
+<sourceObjSchema>ALFA</sourceObjSchema>
+<sourceObjName>LOJA</sourceObjName>
+<createdBy>Henrique Chiosani</createdBy>
+<createdTime>2026-04-10 01:49:35 UTC</createdTime>
+<commentInRDBMS><![CDATA[TABELA REFERENTE AS LOJAS]]></commentInRDBMS>
+<ownerDesignName>Alfa</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="LOJ_ID" id="674D0A4D-A0FA-965B-FE04-E09A79C01183">
+<sourceConnName>Alfa</sourceConnName>
+<sourceObjSchema>LOJA</sourceObjSchema>
+<sourceObjName>LOJ_ID</sourceObjName>
+<createdBy>Henrique Chiosani</createdBy>
+<createdTime>2026-04-10 01:49:35 UTC</createdTime>
+<commentInRDBMS><![CDATA[COLUNA REFERENTE A CHAVE PRIMARIA DA TABELA LOJA]]></commentInRDBMS>
+<ownerDesignName>Alfa</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>6</dataTypePrecision>
+<dataTypeScale>0</dataTypeScale>
+<ownDataTypeParameters>,6,0</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="LOJ_NOME" id="67EC77FF-6AD3-1CB3-6632-380E39184FD0">
+<sourceConnName>Alfa</sourceConnName>
+<sourceObjSchema>LOJA</sourceObjSchema>
+<sourceObjName>LOJ_NOME</sourceObjName>
+<createdBy>Henrique Chiosani</createdBy>
+<createdTime>2026-04-10 01:49:35 UTC</createdTime>
+<commentInRDBMS><![CDATA[COLUNA REFERENTE AO NOME DA LOJA]]></commentInRDBMS>
+<ownerDesignName>Alfa</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>50 BYTE</dataTypeSize>
+<ownDataTypeParameters>50 BYTE,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<notNullConstraintName>CK_LOJ_NN_01</notNullConstraintName>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="F3FE2CCA-927E-1C3A-7443-99CD262ECE32" name="PK_LOJ">
+<sourceConnName>Alfa</sourceConnName>
+<sourceObjSchema>ALFA</sourceObjSchema>
+<sourceObjName>PK_LOJ</sourceObjName>
+<createdBy>Henrique Chiosani</createdBy>
+<createdTime>2026-04-10 01:49:38 UTC</createdTime>
+<ownerDesignName>Alfa</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="674D0A4D-A0FA-965B-FE04-E09A79C01183"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="411635FF-393E-6BDB-6438-40FBD6FC532C" schemaObject="6A3EA8A7-BFE6-837D-A34E-84458FF73ABF" name="PK_LOJ">
+<sourceConnName>Alfa</sourceConnName>
+<sourceObjSchema>ALFA</sourceObjSchema>
+<sourceObjName>PK_LOJ</sourceObjName>
+<createdBy>Henrique Chiosani</createdBy>
+<createdTime>2026-04-10 01:49:38 UTC</createdTime>
+<ownerDesignName>Alfa</ownerDesignName>
+<indexState>Unique Plain Index</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="674D0A4D-A0FA-965B-FE04-E09A79C01183"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

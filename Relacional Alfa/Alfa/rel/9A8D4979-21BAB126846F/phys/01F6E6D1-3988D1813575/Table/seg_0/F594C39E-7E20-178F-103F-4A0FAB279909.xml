@@ -1,0 +1,65 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<TableProxyOraclev20c class="oracle.dbtools.crest.model.design.storage.oracle.v20c.TableProxyOraclev20c" name="HSKU" directorySegmentName="seg_0" id="F594C39E-7E20-178F-103F-4A0FAB279909">
+<createdBy>Henrique Chiosani</createdBy>
+<createdTime>2026-04-10 01:49:35 UTC</createdTime>
+<ownerDesignName>Alfa</ownerDesignName>
+<schemaObject>6A3EA8A7-BFE6-837D-A34E-84458FF73ABF</schemaObject>
+<logging>YES</logging>
+<partitionedRowMovement>DISABLE</partitionedRowMovement>
+<segment>8C0D6BC2-D846-D555-3A4F-0F941D1A7C96</segment>
+<tableSpace>98860CC6-5DE0-5D9D-EB91-E12A23142F2C</tableSpace>
+<temporaryChanged>false</temporaryChanged>
+<accessDriverType>oracle_loader</accessDriverType>
+<rejectLimit></rejectLimit>
+<inMemory>NO</inMemory>
+<columnProxies itemClass="oracle.dbtools.crest.model.design.storage.oracle.v12c.ColumnProxyOraclev12c">
+<ColumnProxy name="HSKU_CUSTO" id="016F583B-2A7C-9F7E-3A8A-5DDA86B8FCF7">
+<createdBy>Henrique Chiosani</createdBy>
+<createdTime>2026-04-10 01:49:35 UTC</createdTime>
+<ownerDesignName>Alfa</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="HSKU_PRD_ID" id="437AE40D-301D-0447-8F51-3B69CDF1D5C7">
+<createdBy>Henrique Chiosani</createdBy>
+<createdTime>2026-04-10 01:49:35 UTC</createdTime>
+<ownerDesignName>Alfa</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="HSKU_ID" id="7B17B4CF-98AB-4CE0-0FEB-E0476978D8E4">
+<createdBy>Henrique Chiosani</createdBy>
+<createdTime>2026-04-10 01:49:35 UTC</createdTime>
+<ownerDesignName>Alfa</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="HSKU_KEY" id="BA9429B3-F33C-31CA-5590-1A50EE5B2F1B">
+<createdBy>Henrique Chiosani</createdBy>
+<createdTime>2026-04-10 01:49:35 UTC</createdTime>
+<ownerDesignName>Alfa</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="HSKU_DATE" id="D01886F7-D947-87D1-26C5-C39B151B8C1E">
+<createdBy>Henrique Chiosani</createdBy>
+<createdTime>2026-04-10 01:49:35 UTC</createdTime>
+<ownerDesignName>Alfa</ownerDesignName>
+</ColumnProxy>
+</columnProxies>
+<indexProxies>
+<IndexProxy class="oracle.dbtools.crest.model.design.storage.oracle.v10g.IndexProxyOraclev10g" name="PK_HSKU" id="DC5717B5-62D1-8901-C4E1-94D2F6C79F57">
+<createdBy>Henrique Chiosani</createdBy>
+<createdTime>2026-04-10 01:49:38 UTC</createdTime>
+<ownerDesignName>Alfa</ownerDesignName>
+<schemaObject>6A3EA8A7-BFE6-837D-A34E-84458FF73ABF</schemaObject>
+<segment>C19536ED-A232-701D-2513-0C59033E3D34</segment>
+<tableSpace>98860CC6-5DE0-5D9D-EB91-E12A23142F2C</tableSpace>
+</IndexProxy>
+</indexProxies>
+<primaryKeys>
+<PrimaryKey class="oracle.dbtools.crest.model.design.storage.oracle.v10g.PKProxyOraclev10g" name="PK_HSKU" id="EE4506FF-C769-0484-80ED-E52503402ED3">
+<createdBy>Henrique Chiosani</createdBy>
+<createdTime>2026-04-10 01:49:38 UTC</createdTime>
+<ownerDesignName>Alfa</ownerDesignName>
+<segment>C19536ED-A232-701D-2513-0C59033E3D34</segment>
+<tableSpace>98860CC6-5DE0-5D9D-EB91-E12A23142F2C</tableSpace>
+<existingIndex>DC5717B5-62D1-8901-C4E1-94D2F6C79F57</existingIndex>
+<indexSegment>C19536ED-A232-701D-2513-0C59033E3D34</indexSegment>
+<indexSort>SORTED</indexSort>
+<usingIndex>BY INDEX NAME</usingIndex>
+</PrimaryKey>
+</primaryKeys>
+</TableProxyOraclev20c>

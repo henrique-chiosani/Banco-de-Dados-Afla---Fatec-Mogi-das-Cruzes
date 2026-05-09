@@ -1,0 +1,23 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<TriggerOraclev10g class="oracle.dbtools.crest.model.design.storage.oracle.v10g.TriggerOraclev10g" name="TG_HPRD" directorySegmentName="seg_0" id="1F9F1E64-8246-436D-9DED-E2806E3C36DC">
+<sourceConnName>Alfa</sourceConnName>
+<sourceObjSchema>ALFA</sourceObjSchema>
+<sourceObjName>TG_HPRD</sourceObjName>
+<createdBy>Henrique Chiosani</createdBy>
+<createdTime>2026-04-10 01:49:38 UTC</createdTime>
+<ownerDesignName>Alfa</ownerDesignName>
+<actions>UPDATE, DELETE</actions>
+<body><![CDATA[BEGIN
+    INSERT INTO 
+        HPRODUTO
+    VALUES(
+        :OLD.PRD_ID,
+        :OLD.PRD_NOME,
+        SYSDATE
+    );
+END;
+]]></body>
+<triggerTime>BEFORE</triggerTime>
+<owner>A4DA9CBF-AA0D-E131-08E1-A1CC99048F70</owner>
+<table>9251451A-E812-BB54-9DF6-92B200B42668</table>
+</TriggerOraclev10g>

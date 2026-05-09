@@ -1,0 +1,27 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<TriggerOraclev10g class="oracle.dbtools.crest.model.design.storage.oracle.v10g.TriggerOraclev10g" name="TG_HVND" directorySegmentName="seg_0" id="9B7921B2-C56A-22BB-4E86-BC6D70EE5AC6">
+<sourceConnName>Alfa</sourceConnName>
+<sourceObjSchema>ALFA</sourceObjSchema>
+<sourceObjName>TG_HVND</sourceObjName>
+<createdBy>Henrique Chiosani</createdBy>
+<createdTime>2026-04-10 01:49:38 UTC</createdTime>
+<ownerDesignName>Alfa</ownerDesignName>
+<actions>UPDATE, DELETE</actions>
+<body><![CDATA[BEGIN
+    INSERT INTO 
+        HVENDA
+    VALUES(
+        :OLD.VND_ID,
+        :OLD.VND_PEDIDO,
+        :OLD.VND_LOJ_ID,
+        :OLD.VND_CAN_ID,
+        :OLD.VND_DATA_VENDA,
+        :OLD.VND_VALOR_TOTAL,
+        SYSDATE
+    );
+END;
+]]></body>
+<triggerTime>BEFORE</triggerTime>
+<owner>A4DA9CBF-AA0D-E131-08E1-A1CC99048F70</owner>
+<table>8F0E1411-5524-6E4A-8865-F787AAC9D593</table>
+</TriggerOraclev10g>

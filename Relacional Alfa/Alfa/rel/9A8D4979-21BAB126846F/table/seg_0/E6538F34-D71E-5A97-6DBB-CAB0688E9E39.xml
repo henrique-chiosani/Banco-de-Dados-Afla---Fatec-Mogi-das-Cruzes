@@ -1,0 +1,92 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="E6538F34-D71E-5A97-6DBB-CAB0688E9E39" schemaObject="6A3EA8A7-BFE6-837D-A34E-84458FF73ABF" name="HCANAL">
+<sourceConnName>Alfa</sourceConnName>
+<sourceObjSchema>ALFA</sourceObjSchema>
+<sourceObjName>HCANAL</sourceObjName>
+<createdBy>Henrique Chiosani</createdBy>
+<createdTime>2026-04-10 01:49:35 UTC</createdTime>
+<commentInRDBMS><![CDATA[TABELA REFERENTE AO HISTORICO DA TABELA CANAL]]></commentInRDBMS>
+<ownerDesignName>Alfa</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="HCAN_ID" id="DA701B76-44A1-4733-563B-66EC63995E0B">
+<sourceConnName>Alfa</sourceConnName>
+<sourceObjSchema>HCANAL</sourceObjSchema>
+<sourceObjName>HCAN_ID</sourceObjName>
+<createdBy>Henrique Chiosani</createdBy>
+<createdTime>2026-04-10 01:49:35 UTC</createdTime>
+<commentInRDBMS><![CDATA[COLUNA REFERENTE AO REGISTRO DA CHAVE PRIMARIA DA TABELA CANAL]]></commentInRDBMS>
+<ownerDesignName>Alfa</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>6</dataTypePrecision>
+<dataTypeScale>0</dataTypeScale>
+<ownDataTypeParameters>,6,0</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="HCAN_NOME" id="861FAEC6-61A0-E08B-36AD-32BB6D20C52F">
+<sourceConnName>Alfa</sourceConnName>
+<sourceObjSchema>HCANAL</sourceObjSchema>
+<sourceObjName>HCAN_NOME</sourceObjName>
+<createdBy>Henrique Chiosani</createdBy>
+<createdTime>2026-04-10 01:49:35 UTC</createdTime>
+<commentInRDBMS><![CDATA[COLUNA REFERENTE AO REGISTRO DO NOME DO CANAL]]></commentInRDBMS>
+<ownerDesignName>Alfa</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>50 BYTE</dataTypeSize>
+<ownDataTypeParameters>50 BYTE,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="HCAN_DATE" id="5F2BAFA6-E611-219E-18C7-7BF8607814DB">
+<sourceConnName>Alfa</sourceConnName>
+<sourceObjSchema>HCANAL</sourceObjSchema>
+<sourceObjName>HCAN_DATE</sourceObjName>
+<createdBy>Henrique Chiosani</createdBy>
+<createdTime>2026-04-10 01:49:35 UTC</createdTime>
+<ownerDesignName>Alfa</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT015</logicalDatatype>
+<dataTypePrecision>6</dataTypePrecision>
+<ownDataTypeParameters>,6,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="8F7B8CE4-A9CA-077B-1A0B-6924E4FAB458" name="PK_HCAN">
+<sourceConnName>Alfa</sourceConnName>
+<sourceObjSchema>ALFA</sourceObjSchema>
+<sourceObjName>PK_HCAN</sourceObjName>
+<createdBy>Henrique Chiosani</createdBy>
+<createdTime>2026-04-10 01:49:38 UTC</createdTime>
+<ownerDesignName>Alfa</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="DA701B76-44A1-4733-563B-66EC63995E0B"/>
+<colUsage columnID="5F2BAFA6-E611-219E-18C7-7BF8607814DB"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="1A8F40E4-136E-CC14-37EC-4A72ACAFFC1D" schemaObject="6A3EA8A7-BFE6-837D-A34E-84458FF73ABF" name="PK_HCAN">
+<sourceConnName>Alfa</sourceConnName>
+<sourceObjSchema>ALFA</sourceObjSchema>
+<sourceObjName>PK_HCAN</sourceObjName>
+<createdBy>Henrique Chiosani</createdBy>
+<createdTime>2026-04-10 01:49:37 UTC</createdTime>
+<ownerDesignName>Alfa</ownerDesignName>
+<indexState>Unique Plain Index</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="DA701B76-44A1-4733-563B-66EC63995E0B"/>
+<colUsage columnID="5F2BAFA6-E611-219E-18C7-7BF8607814DB"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

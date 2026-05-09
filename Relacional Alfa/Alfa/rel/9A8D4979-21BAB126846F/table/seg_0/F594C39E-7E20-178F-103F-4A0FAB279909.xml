@@ -1,0 +1,126 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="F594C39E-7E20-178F-103F-4A0FAB279909" schemaObject="6A3EA8A7-BFE6-837D-A34E-84458FF73ABF" name="HSKU">
+<sourceConnName>Alfa</sourceConnName>
+<sourceObjSchema>ALFA</sourceObjSchema>
+<sourceObjName>HSKU</sourceObjName>
+<createdBy>Henrique Chiosani</createdBy>
+<createdTime>2026-04-10 01:49:35 UTC</createdTime>
+<commentInRDBMS><![CDATA[TABELA REFERENTE AO HISTORICO DA TABELA SKU]]></commentInRDBMS>
+<ownerDesignName>Alfa</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="HSKU_ID" id="7B17B4CF-98AB-4CE0-0FEB-E0476978D8E4">
+<sourceConnName>Alfa</sourceConnName>
+<sourceObjSchema>HSKU</sourceObjSchema>
+<sourceObjName>HSKU_ID</sourceObjName>
+<createdBy>Henrique Chiosani</createdBy>
+<createdTime>2026-04-10 01:49:35 UTC</createdTime>
+<commentInRDBMS><![CDATA[COLUNA REFERENTE AO REGISTRO DA CHAVE PRIMARIA DA TABELA SKU]]></commentInRDBMS>
+<ownerDesignName>Alfa</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>6</dataTypePrecision>
+<dataTypeScale>0</dataTypeScale>
+<ownDataTypeParameters>,6,0</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="HSKU_KEY" id="BA9429B3-F33C-31CA-5590-1A50EE5B2F1B">
+<sourceConnName>Alfa</sourceConnName>
+<sourceObjSchema>HSKU</sourceObjSchema>
+<sourceObjName>HSKU_KEY</sourceObjName>
+<createdBy>Henrique Chiosani</createdBy>
+<createdTime>2026-04-10 01:49:35 UTC</createdTime>
+<commentInRDBMS><![CDATA[COLUNA REFERENTE AO REGISTRO DO CODIGO DE IDENTIFICACAO UNICA DO PRODUTO]]></commentInRDBMS>
+<ownerDesignName>Alfa</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>50 BYTE</dataTypeSize>
+<ownDataTypeParameters>50 BYTE,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="HSKU_PRD_ID" id="437AE40D-301D-0447-8F51-3B69CDF1D5C7">
+<sourceConnName>Alfa</sourceConnName>
+<sourceObjSchema>HSKU</sourceObjSchema>
+<sourceObjName>HSKU_PRD_ID</sourceObjName>
+<createdBy>Henrique Chiosani</createdBy>
+<createdTime>2026-04-10 01:49:35 UTC</createdTime>
+<commentInRDBMS><![CDATA[COLUNA REFERENTE AO REGISTRO DA CHAVE ESTRANGEIRA REFERENCIADA PELA TABELA PRODUTO]]></commentInRDBMS>
+<ownerDesignName>Alfa</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>6</dataTypePrecision>
+<dataTypeScale>0</dataTypeScale>
+<ownDataTypeParameters>,6,0</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="HSKU_CUSTO" id="016F583B-2A7C-9F7E-3A8A-5DDA86B8FCF7">
+<sourceConnName>Alfa</sourceConnName>
+<sourceObjSchema>HSKU</sourceObjSchema>
+<sourceObjName>HSKU_CUSTO</sourceObjName>
+<createdBy>Henrique Chiosani</createdBy>
+<createdTime>2026-04-10 01:49:35 UTC</createdTime>
+<commentInRDBMS><![CDATA[COLUNA REFERENTE AO REGISTRO DO CUSTO DO SKU]]></commentInRDBMS>
+<ownerDesignName>Alfa</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>12</dataTypePrecision>
+<dataTypeScale>2</dataTypeScale>
+<ownDataTypeParameters>,12,2</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="HSKU_DATE" id="D01886F7-D947-87D1-26C5-C39B151B8C1E">
+<sourceConnName>Alfa</sourceConnName>
+<sourceObjSchema>HSKU</sourceObjSchema>
+<sourceObjName>HSKU_DATE</sourceObjName>
+<createdBy>Henrique Chiosani</createdBy>
+<createdTime>2026-04-10 01:49:35 UTC</createdTime>
+<ownerDesignName>Alfa</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT015</logicalDatatype>
+<dataTypePrecision>6</dataTypePrecision>
+<ownDataTypeParameters>,6,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="EE4506FF-C769-0484-80ED-E52503402ED3" name="PK_HSKU">
+<sourceConnName>Alfa</sourceConnName>
+<sourceObjSchema>ALFA</sourceObjSchema>
+<sourceObjName>PK_HSKU</sourceObjName>
+<createdBy>Henrique Chiosani</createdBy>
+<createdTime>2026-04-10 01:49:38 UTC</createdTime>
+<ownerDesignName>Alfa</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="7B17B4CF-98AB-4CE0-0FEB-E0476978D8E4"/>
+<colUsage columnID="D01886F7-D947-87D1-26C5-C39B151B8C1E"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="DC5717B5-62D1-8901-C4E1-94D2F6C79F57" schemaObject="6A3EA8A7-BFE6-837D-A34E-84458FF73ABF" name="PK_HSKU">
+<sourceConnName>Alfa</sourceConnName>
+<sourceObjSchema>ALFA</sourceObjSchema>
+<sourceObjName>PK_HSKU</sourceObjName>
+<createdBy>Henrique Chiosani</createdBy>
+<createdTime>2026-04-10 01:49:38 UTC</createdTime>
+<ownerDesignName>Alfa</ownerDesignName>
+<indexState>Unique Plain Index</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="7B17B4CF-98AB-4CE0-0FEB-E0476978D8E4"/>
+<colUsage columnID="D01886F7-D947-87D1-26C5-C39B151B8C1E"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

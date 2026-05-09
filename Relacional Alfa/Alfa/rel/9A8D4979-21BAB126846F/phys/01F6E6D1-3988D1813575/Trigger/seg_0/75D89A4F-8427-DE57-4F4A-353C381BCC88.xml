@@ -1,0 +1,23 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<TriggerOraclev10g class="oracle.dbtools.crest.model.design.storage.oracle.v10g.TriggerOraclev10g" name="TG_HCAN" directorySegmentName="seg_0" id="75D89A4F-8427-DE57-4F4A-353C381BCC88">
+<sourceConnName>Alfa</sourceConnName>
+<sourceObjSchema>ALFA</sourceObjSchema>
+<sourceObjName>TG_HCAN</sourceObjName>
+<createdBy>Henrique Chiosani</createdBy>
+<createdTime>2026-04-10 01:49:38 UTC</createdTime>
+<ownerDesignName>Alfa</ownerDesignName>
+<actions>UPDATE, DELETE</actions>
+<body><![CDATA[BEGIN
+    INSERT INTO 
+        HCANAL
+    VALUES(
+        :OLD.CAN_ID,
+        :OLD.CAN_NOME,
+        SYSDATE
+    );
+END;
+]]></body>
+<triggerTime>BEFORE</triggerTime>
+<owner>A4DA9CBF-AA0D-E131-08E1-A1CC99048F70</owner>
+<table>DDE3F175-5535-82B2-5E77-B70AB3D3A012</table>
+</TriggerOraclev10g>

@@ -1,0 +1,9 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<UserOraclev10g class="oracle.dbtools.crest.model.design.storage.oracle.v10g.UserOraclev10g" name="ALFA" directorySegmentName="seg_0" id="A4DA9CBF-AA0D-E131-08E1-A1CC99048F70">
+<sourceConnName>Alfa</sourceConnName>
+<sourceObjName>ALFA</sourceObjName>
+<createdBy>Henrique Chiosani</createdBy>
+<createdTime>2026-04-10 01:49:35 UTC</createdTime>
+<ownerDesignName>Alfa</ownerDesignName>
+<schemaObject>6A3EA8A7-BFE6-837D-A34E-84458FF73ABF</schemaObject>
+</UserOraclev10g>

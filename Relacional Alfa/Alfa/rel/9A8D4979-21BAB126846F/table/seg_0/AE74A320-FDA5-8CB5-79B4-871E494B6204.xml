@@ -1,0 +1,92 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="AE74A320-FDA5-8CB5-79B4-871E494B6204" schemaObject="6A3EA8A7-BFE6-837D-A34E-84458FF73ABF" name="HLOJA">
+<sourceConnName>Alfa</sourceConnName>
+<sourceObjSchema>ALFA</sourceObjSchema>
+<sourceObjName>HLOJA</sourceObjName>
+<createdBy>Henrique Chiosani</createdBy>
+<createdTime>2026-04-10 01:49:35 UTC</createdTime>
+<commentInRDBMS><![CDATA[TABELA REFERENTE AO HISTORICO DA TABELA LOJA]]></commentInRDBMS>
+<ownerDesignName>Alfa</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="HLOJ_ID" id="51D43FE8-4D8D-A622-E5F9-E6E26714E245">
+<sourceConnName>Alfa</sourceConnName>
+<sourceObjSchema>HLOJA</sourceObjSchema>
+<sourceObjName>HLOJ_ID</sourceObjName>
+<createdBy>Henrique Chiosani</createdBy>
+<createdTime>2026-04-10 01:49:35 UTC</createdTime>
+<commentInRDBMS><![CDATA[COLUNA REFERENTE AO REGISTRO DA CHAVE PRIMARIA DA TABELA LOJA]]></commentInRDBMS>
+<ownerDesignName>Alfa</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>6</dataTypePrecision>
+<dataTypeScale>0</dataTypeScale>
+<ownDataTypeParameters>,6,0</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="HLOJ_NOME" id="DCB18636-AFC8-E6ED-A63C-EEDAD49F6B8D">
+<sourceConnName>Alfa</sourceConnName>
+<sourceObjSchema>HLOJA</sourceObjSchema>
+<sourceObjName>HLOJ_NOME</sourceObjName>
+<createdBy>Henrique Chiosani</createdBy>
+<createdTime>2026-04-10 01:49:35 UTC</createdTime>
+<commentInRDBMS><![CDATA[COLUNA REFERENTE AO REGISTRO DO NOME DA LOJA]]></commentInRDBMS>
+<ownerDesignName>Alfa</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>50 BYTE</dataTypeSize>
+<ownDataTypeParameters>50 BYTE,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="HLOJ_DATE" id="D576883C-C706-C552-1758-24C41B191459">
+<sourceConnName>Alfa</sourceConnName>
+<sourceObjSchema>HLOJA</sourceObjSchema>
+<sourceObjName>HLOJ_DATE</sourceObjName>
+<createdBy>Henrique Chiosani</createdBy>
+<createdTime>2026-04-10 01:49:35 UTC</createdTime>
+<ownerDesignName>Alfa</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT015</logicalDatatype>
+<dataTypePrecision>6</dataTypePrecision>
+<ownDataTypeParameters>,6,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="07BC46C4-232A-D108-5787-CF95281E40FC" name="PK_HLOJ">
+<sourceConnName>Alfa</sourceConnName>
+<sourceObjSchema>ALFA</sourceObjSchema>
+<sourceObjName>PK_HLOJ</sourceObjName>
+<createdBy>Henrique Chiosani</createdBy>
+<createdTime>2026-04-10 01:49:38 UTC</createdTime>
+<ownerDesignName>Alfa</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="51D43FE8-4D8D-A622-E5F9-E6E26714E245"/>
+<colUsage columnID="D576883C-C706-C552-1758-24C41B191459"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="47C25FC1-FA74-0150-CECA-E69EB84E7671" schemaObject="6A3EA8A7-BFE6-837D-A34E-84458FF73ABF" name="PK_HLOJ">
+<sourceConnName>Alfa</sourceConnName>
+<sourceObjSchema>ALFA</sourceObjSchema>
+<sourceObjName>PK_HLOJ</sourceObjName>
+<createdBy>Henrique Chiosani</createdBy>
+<createdTime>2026-04-10 01:49:38 UTC</createdTime>
+<ownerDesignName>Alfa</ownerDesignName>
+<indexState>Unique Plain Index</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="51D43FE8-4D8D-A622-E5F9-E6E26714E245"/>
+<colUsage columnID="D576883C-C706-C552-1758-24C41B191459"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>
