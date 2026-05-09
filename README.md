@@ -30,26 +30,6 @@ Principais objetivos:
 
 ---
 
-# 📂 Estrutura do Projeto
-
-```txt
-📦 projeto-banco-dados
- ┣ 📂 scripts
- ┃ ┣ create_tables.sql
- ┃ ┣ inserts.sql
- ┃ ┣ queries.sql
- ┃ ┗ views_triggers.sql
- ┣ 📂 docs
- ┃ ┣ diagrama_er.png
- ┃ ┗ modelo_logico.pdf
- ┣ 📂 backup
- ┃ ┗ backup.sql
- ┣ README.md
- ┗ modelo.mwb
-```
-
----
-
 # 🧩 Modelagem do Banco
 
 O banco foi modelado utilizando o modelo relacional com foco em organização, integridade e escalabilidade.
